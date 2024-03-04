@@ -92,33 +92,35 @@
     if ( isset($_POST["sujet"]) ) {
         $sujet = $_POST["sujet"];
     }
-    if (isset($_POST["g-recaptcha"])) {
-        $captcha = $_POST["g-recaptcha"];
-        echo"ok check captcha";
-    }
     
     
-    if (!captchaVerfie() && isset($email , $firstName ,$lastName,$sujet,$message,$captcha) ) {
+    
+    if (captchaVerfie() && isset($email , $firstName ,$lastName,$sujet,$message) ) {
         $mail = new PHPMailer(true);
         $user = "spamfake2022@gmail.com";
         $pass = 'gqjxgwtadigppdln';
+
+        $content = "From : $firstName $lastName \r\n objet : $sujet \r\n".$message."\n";
         
-        if (sendMail($mail , $user,$pass,$user,$email,$sujet,$message)) {
+        if (sendMail($mail , $user,$pass,$user,$user,$sujet,$content)) {
             echo"
             <script>
                 alert('send ok');
                 window.location.href='contact.html';
 
             </script>
-            "; 
+            ";
+            sendMail($mail,$user ,$pass ,$user ,$email,"message bien reussit","nous avons reussit votre message \n nous sommes tres heureux :)");
+            
         }  
     }else {
         echo"
         <script>
             alert('error');
             window.location.href='contact.html';
-
         </script>
+
+        <h1></h1>
         "; 
     }
 ?>
