@@ -3,13 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gaming Club</title>
+        <title>News</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
             .w-100 {
                 width: 100% ;
                 height: 75vh;
               }
+              .newstext{
+                display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 10vh;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Changing font */
+                color: rgb(4, 20, 71); /* Example color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  /* Different font for tournaments */
+
+            }
         </style>
     </head>
 <body>
@@ -23,10 +35,10 @@
                 <div class="collapse navbar-collapse navbar-brand" id="navbar001">
                     <ul class="navbar-nav mb-2 me-auto mb-lg-0 ">
                         <li class="nav-item">
-                            <a href="index.html" aria-current="page" class="nav-link active">Home</a>
+                            <a href="index.html" aria-current="page" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="news.html" aria-current="page" class="nav-link">News</a>
+                            <a href="news.html" aria-current="page" class="nav-link active">News</a>
                         </li>
                         <li class="nav-item">
                             <a href="tournaments.html" aria-current="page" class="nav-link">Tournaments</a>
@@ -41,7 +53,7 @@
         </nav>
     </header>
     <main>
-    <h1>Latest News</h1>
+    <h1 class="newstext ">Latest News</h1>
         <p>This is where you can find all the latest news about the FSTT Gaming Club.</p>
         <!-- Add your news content here -->
     </main>
