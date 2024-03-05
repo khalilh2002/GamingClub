@@ -23,13 +23,26 @@
       "MORF" 15,
       "SHLN" 50;
 }
-
-.navbar {
-    font-family: "roboto";
-    
+.font-roboto{
+    font-family: 'roboto';
 }
+
 /*font end*/
-body {
+
+/*general*/
+.navbar {
+    font-family: "roboto"; 
+}
+.title{
+    font-family: 'roboto';
+    font-size: 48px;
+    color: hsl(271, 80%, 30%);
+}
+
+
+
+/*specific*/
+#body-index {
     background:hsl(268, 92%, 65%) 
 
 }
