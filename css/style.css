@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'IamPerfect23';
+    src: url(/css/ImPerfect23/ImPerfect23.otf);
+}
+@font-face {
+    font-family: 'dredd';
+    src: url(/css/dredd/dredd.otf);
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(/css/Roboto/Roboto-Bold.ttf);
+}
+/*font*/
+.font-dredd{
+    font-family: "dredd";
+}
+.font-honk{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+}
+
+.navbar {
+    font-family: "roboto";
+    
+}
+/*font end*/
+body {
+    background:hsl(268, 92%, 65%) 
+
+}
 #home .container{
     min-width: 100%;
     min-height: 100%;
@@ -5,3 +40,13 @@
 #main-logo{
     border-radius: 50%;
 }
+#home p{
+    color: white;
+    font-weight: 300;
+}
+#home .btn-outline-info{
+    background: white(268, 92%, 70%) ;
+}
+
+
+  
