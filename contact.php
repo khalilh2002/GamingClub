@@ -15,6 +15,9 @@
             font-size: 48px;
             margin: 0;
         }
+        <?php 
+          include "./css/style.css" ;
+        ?>
     </style>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
@@ -27,6 +30,7 @@
         include_once("./navbar.php")
     ?>        
 </header>
+
 <h2 class="contacttext font-roboto ">Contact us</h2>
 
 <main >

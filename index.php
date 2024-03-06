@@ -13,9 +13,9 @@
         }    
         
         
-  <?php 
-    include "./css/style.css" ;
-  ?>
+    <?php 
+        include "./css/style.css" ;
+    ?>
 
 
     </style>
@@ -38,24 +38,29 @@
     <section id="home">
         <div class="container-xl pt-5">
             <div class="row gap-4">
+                <!-- Introduction Section -->
                 <div id="intro" class="col-7">
                     <h1 class="h1 font-dredd">Gaming CLUB 🎮</h1>
-                    <h3 class="font-honk">FST Tangier Gaming club!!🔥⚡!</h3>
+                    <h3 class="font-honk">FST Tangier Gaming Club!!🔥⚡!</h3>
                     <p class="lead lh-3">
-                        Discover the world of gaming with us. From tournaments to casual play, find everything you need right here. Join us for events, connect with fellow gamers, and explore our diverse gaming library. so What are you Waiting for?? Join us right now!!
+                        Discover the world of gaming with us. From tournaments to casual play, find everything you need right here.
+                        Join us for events, connect with fellow gamers, and explore our diverse gaming library.
+                        What are you waiting for? Join us right now!!
                     </p>
                     <div class="d-grid d-md-flex gap-2 justify-content-md-end pt-3" id="bouttonHome">
-                        <a href="" class="z-3 btn btn-lg btn-primary ">Contact Us</a>
-                        <a href="" class="z-3 btn btn-lg btn-primary ">About Us</a>
+                        <a href="" class="z-3 btn btn-lg btn-primary">Contact Us</a>
+                        <a href="" class="z-3 btn btn-lg btn-primary">About Us</a>
                     </div>
                 </div>
-                <div class="col-4  ">
+
+                <!-- Image Section -->
+                <div class="col-4">
                     <img src="./img/background.png" class="img-fluid shadow-lg" alt="" id="main-logo">
                 </div>
             </div>
-            
         </div>
     </section>
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
