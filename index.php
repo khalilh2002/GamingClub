@@ -12,39 +12,21 @@
             height: 75vh;
         }    
     </style>
-    <link rel="stylesheet" href="/css/style.css">
+    <!--bootstrap offline-->
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
+    
     <!--- font --->
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Honk&family=Protest+Strike&display=swap" rel="stylesheet">
 </head>
 <body id="body-index">
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark  border-bottom border-body" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">
-                    <img src="img/agario.png" alt="Gaming Club" width="30" height="24">
-                    Gaming Club
-                </a>
-                <div class="collapse navbar-collapse navbar-brand" id="navbar001">
-                    <ul class="navbar-nav mb-2 me-auto mb-lg-0 ">
-                        <li class="nav-item">
-                            <a href="index.html" aria-current="page" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="news.html" aria-current="page" class="nav-link">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="tournaments.html" aria-current="page" class="nav-link">Tournaments</a>
-                        <li class="nav-item">
-                            <a href="contact.html" aria-current="page" class="nav-link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">Click me</button>
-                
-            </div>
-        </nav>
+        <?php
+            include_once("./navbar.php")
+        ?>
     </header>
     <main style="display: none;">
         <div class="carousel slide" id="carousel">
@@ -92,7 +74,7 @@
                     <h1 class="h1 font-dredd">Gaming CLUB 🎮</h1>
                     <h3 class="font-honk">FST Tangier Gaming club!!🔥⚡!</h3>
                     <p class="lead lh-3">
-Discover the world of gaming with us. From tournaments to casual play, find everything you need right here. Join us for events, connect with fellow gamers, and explore our diverse gaming library. so What are you Waiting for?? Join us right now!!
+                        Discover the world of gaming with us. From tournaments to casual play, find everything you need right here. Join us for events, connect with fellow gamers, and explore our diverse gaming library. so What are you Waiting for?? Join us right now!!
                     </p>
                     <div class="d-grid d-md-flex gap-2 justify-content-md-end pt-3" id="bouttonHome">
                         <a href="" class="z-3 btn btn-lg btn-primary ">Contact Us</a>
