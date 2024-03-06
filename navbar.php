@@ -24,9 +24,24 @@
                 <li class="nav-item">
                     <a href="contact" aria-current="page" class="nav-link">Contact Us</a>
                 </li>
+                
             </ul>
         </div>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001"><i class="fa-solid fa-bars"></i></button>
+        <div class="navbar-brand drop dropdown">
+            
+                <a href="#" role="button" data-bs-toggle="dropdown" 
+                class="nav-link dropdown-toggle" aria-expanded="false">
+                User
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Login</a></li>
+                    <li><a href="#" class="dropdown-item">Inscription</a></li>
+                </ul>
+            
+        </div>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <script src="https://kit.fontawesome.com/90297b3c39.js" crossorigin="anonymous"></script>
     </div>
 </nav>
