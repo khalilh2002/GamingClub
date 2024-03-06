@@ -1,14 +1,12 @@
-@font-face {
-    font-family: 'IamPerfect23';
-    src: url(/css/ImPerfect23/ImPerfect23.otf);
-}
+
 @font-face {
     font-family: 'dredd';
-    src: url(/css/dredd/dredd.otf);
+    src: 
+        url(./css/dredd/dredd.otf);
 }
 @font-face {
     font-family: 'roboto';
-    src: url(/css/Roboto/Roboto-Bold.ttf);
+    src: url(./css/Roboto/Roboto-Bold.ttf) ;
 }
 /*font*/
 .font-dredd{

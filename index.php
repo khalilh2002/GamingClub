@@ -11,6 +11,13 @@
             width: 100% ;
             height: 75vh;
         }    
+        
+        
+  <?php 
+    include "./css/style.css" ;
+  ?>
+
+
     </style>
     <!--bootstrap offline-->
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
@@ -28,45 +35,6 @@
             include_once("./navbar.php")
         ?>
     </header>
-    <main style="display: none;">
-        <div class="carousel slide" id="carousel">
-            
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
-                
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"  aria-label="Slide 2" ></button>
-                
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"  aria-label="Slide 3" ></button>   
-            </div>
-            
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/gamingclub.jpg" alt="homepageimg" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Welcome to The Official Website of The FSTT Gaming Club</h5>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <img src="img/about-us.jpg" alt="aboutusimage" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>At FST Tanger Gaming Club</h5>
-                        <p>, we are passionate about bringing together students who share a love for gaming in all its forms. Whether you're a casual player looking for some fun during breaks or a competitive gamer seeking challenges, our club provides a welcoming and inclusive environment for all.</p>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <img src="img/gamingsetup.jpg" alt="descimage" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>What Do We Offer??</h5>
-                        <p> Heres Your Answer: In Our Club we can Discuss Everything thats Related to Gaming . Also, we Host Competitions on all Different Types of Games and we can also participate in Tournaments whether they re Local,Regional or National Even. So What are you Waiting For?? Contact Us right now if you are Interested to be a Part of this Family!!</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    
-    </main>
     <section id="home">
         <div class="container-xl pt-5">
             <div class="row gap-4">
@@ -82,7 +50,7 @@
                     </div>
                 </div>
                 <div class="col-4  ">
-                    <img src="/img/background.png" class="img-fluid shadow-lg" alt="" id="main-logo">
+                    <img src="./img/background.png" class="img-fluid shadow-lg" alt="" id="main-logo">
                 </div>
             </div>
             
