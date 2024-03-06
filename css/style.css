@@ -36,7 +36,9 @@
     font-size: 48px;
     color: hsl(271, 80%, 30%);
 }
-
+.hide{
+    display: none;
+}
 
 
 /*specific*/

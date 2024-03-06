@@ -66,7 +66,7 @@
         
         <div class="col-6">
             <!-- get captcha responde--->
-            <div class="g-recaptcha" data-sitekey="6LdvtYkpAAAAANPRBGzc6LZV5ch4nUFW-SfljoPA" data-action="LOGIN"></div>
+            <div class="g-recaptcha hide" data-sitekey="6LdvtYkpAAAAANPRBGzc6LZV5ch4nUFW-SfljoPA" data-action="LOGIN"></div>
             <br/>
             <button class=" btn btn-outline-primary btn-lg"  type="submit">Submit</button>
             
