@@ -50,7 +50,7 @@
           <h5 class="card-title">The Apex #6</h5>
           <p class="card-text">Game: FC 24 </br>
             Location: Iberia, Tangier</br>
-        Prizepool: 1000 DH</p>
+            Prizepool: 1000 DH</p>
           <a href="#" class="btn btn-primary">Visit Link</a>
         </div>
         <div class="card-footer">
