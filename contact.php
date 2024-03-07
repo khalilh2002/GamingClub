@@ -24,7 +24,7 @@
  
     
 </head>
-<body >
+<body id="body-index" >
 <header>
     <?php
         include_once("./navbar.php")

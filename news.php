@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="./css/style.css">
         
     </head>
-<body>
+<body id="body-index">
     <header>
       <?php
         include_once("./navbar.php")
