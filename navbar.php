@@ -35,7 +35,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="#" class="dropdown-item">Login</a></li>
-                    <li><a href="#" class="dropdown-item">Inscription</a></li>
+                    <li><a href="./inscription.php" class="dropdown-item">Inscription</a></li>
                 </ul>
             
         </div>

@@ -10,15 +10,13 @@
         .w-100 {
             width: 100% ;
             height: 75vh;
-        }    
-        
-        
-    <?php 
-        include "./css/style.css" ;
-    ?>
+        } 
 
-
+        <?php 
+            include "./css/style.css" ;
+        ?>
     </style>
+    
     <!--bootstrap offline-->
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
@@ -32,9 +30,10 @@
 <body id="body-index">
     <header>
         <?php
-            include_once("./navbar.php")
+            include("./navbar.php")
         ?>
     </header>
+    
     <section id="home">
         <div class="container-xl pt-5">
             <div class="row gap-4">

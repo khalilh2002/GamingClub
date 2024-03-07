@@ -35,7 +35,7 @@
 
 <main >
 
-    <form id="contact-form" action="send.php" method="post" class="row g-3" name="submit-to-google-sheet">
+    <form id="contact-form" action="send.php" method="post" class="row g-3" name="">
         <div class="col-6">
             <div class="form-floating mb-3">
                 <input type="text" name="firstName" class="form-control" placeholder="Name"  id="firstNameID">

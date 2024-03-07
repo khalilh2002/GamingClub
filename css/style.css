@@ -43,7 +43,10 @@
 
 /*specific*/
 #body-index {
-    background:hsl(268, 92%, 65%) 
+    /*background:hsl(268, 92%, 65%) ;*/
+    background-image: url("./css/back.jpg") ;
+    background-repeat: no-repeat;
+    background-position: top;
 
 }
 #home .container{
@@ -51,6 +54,7 @@
     min-height: 100%;
 }
 #main-logo{
+    display: none;
     border-radius: 50%;
 }
 #home p{
