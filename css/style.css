@@ -47,6 +47,9 @@
     background-image: url("./css/back.jpg") ;
     background-repeat: no-repeat;
     background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 
 }
 #home .container{

@@ -24,20 +24,12 @@
             <a href="#" role="button" data-bs-toggle="dropdown" 
                 class="nav-link dropdown-toggle" aria-expanded="false">
                 User
-<<<<<<< HEAD
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="#" class="dropdown-item">Login</a></li>
                     <li><a href="./inscription.php" class="dropdown-item">Inscription</a></li>
                 </ul>
             
-=======
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item">Login</a></li>
-                <li><a href="#" class="dropdown-item">Inscription</a></li>
-            </ul>
->>>>>>> 6dd40634f2cc2f59d30cad0ab109f01d0ee6f295
         </div>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">
             <i class="fa-solid fa-bars"></i>
