@@ -44,10 +44,10 @@
 /*specific*/
 #body-index {
     /*background:hsl(268, 92%, 65%) ;*/
-    background-image: url("./css/cyberpunkbg.jpg") ;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    background-image: url("./css/cyberpunkbg.jpg") ; 
+    background-repeat: no-repeat ;
+    background-position: top ;
+    background-size: cover ;
     
     
 
