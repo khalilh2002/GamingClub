@@ -33,7 +33,14 @@
         </nav>
     </header>
     <?php
-        
+        include "./connect.php";  
     ?> 
 </body>
+<form enctype="multipart/form-data" action="upload.php" method="POST">
+    label.
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="9999999999" />
+    Send this file: <input name="image" type="file" />
+    <input type="submit" name="submit" value="Send File" />
+</form>
 </html>
