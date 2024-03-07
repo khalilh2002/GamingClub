@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand">
+        <a href="./admin.php" class="navbar-brand">
             <img src="img/agario.png" alt="Gaming Club" width="30" height="24">
             Gaming Club
         </a>
