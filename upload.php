@@ -1,11 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
+</head>
+<body>
 <?php
-    if (isset($_FILES["image"]) && isset($_POST["submit"])) {
+    if (isset($_FILES["image"], $_POST["card_title"],
+        $_POST["card_text"] , $_POST["link"] ,$_POST["submit"] )) 
+        {
+
         $filepath = "./img/upload/";
         $fileName = basename($_FILES["image"]["name"]);
         $filepath = $filepath."".$fileName;
 
+
         if (move_uploaded_file($_FILES['image']['tmp_name'],$filepath)) {
             echo"its okey it move";
+            $card_title = $_POST["card_title"];
+            $card_text = $_POST["card_text"] ;
+            $card_link = $_POST["link"] ;
+            $card_img = $filepath;
+
+            echo'
+            
+        <div class="row">
+            <div class="col-4">
+                <div class="card h-100">
+                <img src="'.$card_img.'" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">'.$card_title.'</h5>
+                <p class="card-text">'.$card_text.'
+                <a href="'.$card_link.'" class="btn btn-primary">Visit Link</a>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            </div>
+        </div>
+          ';
+
+
+
         }else{
             echo"oh noooooooooooooooooo";
             echo 'Here is some more debugging info:';
@@ -18,4 +58,7 @@
         ";
     }
     
-?>
+?>  
+    
+</body>
+</html>

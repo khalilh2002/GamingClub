@@ -62,17 +62,17 @@
                 <input
                     type="url"
                     class="form-control"
-                    name="linkid"
+                    name="link"
                     id="linkid"
                     placeholder="url"
                 />
-                <label for="linkid">url</label>
+                <label for="link">url</label>
             </div>
             
         </div>
 
     </div>
-     <a type="submit" name="submit" value="Send File" class="btn btn-outline-danger">ADD</a>   
+     <button type="submit" name="submit" value="Send File" class="btn btn-outline-danger">ADD</button>   
     
     
 </form>
