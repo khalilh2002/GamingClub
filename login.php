@@ -2,16 +2,20 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>HTML5 Login Form with validation Example</title>
+  <title>Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./css/loginstyle.css">
+<style>
+  <?php 
+            include "./css/loginstyle.css";
+        ?>
+  </style>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id="login-form-wrap">
-  <h2>Login</h2>
-  <form id="login-form">
+<div id="background"></div> <!-- This will serve as the blurred background -->
+  <div id="login-form-wrap">
+    <h2>Login</h2>
+    <form id="login-form">
     <p>
     <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
     </p>

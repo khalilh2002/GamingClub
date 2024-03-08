@@ -26,8 +26,8 @@
                 User
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="login.html" class="dropdown-item">Login</a></li>
-                    <li><a href="register.html" class="dropdown-item">Register</a></li>
+                    <li><a href="login.php" class="dropdown-item">Login</a></li>
+                    <li><a href="register.php" class="dropdown-item">Register</a></li>
                 </ul>
             
         </div>
