@@ -33,8 +33,6 @@
   </div>
 </nav>
 </header>
-    <?php
-
-    ?>    
+       
 </body>
 </html>
