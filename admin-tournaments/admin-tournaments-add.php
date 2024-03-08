@@ -1,4 +1,4 @@
-<form enctype="multipart/form-data" action="upload.php" method="POST">
+<form enctype="multipart/form-data" action="admin-tournaments/upload.php" method="POST">
     <div class="row">
         <div class="col-md-6">
             <div class="form-floating mb-3">
