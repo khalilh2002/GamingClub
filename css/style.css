@@ -28,7 +28,9 @@
 .font-roboto{
     font-family: 'roboto';
     font-size: x-large;
+    color: white;
 }
+
 
 /*font end*/
 
@@ -76,10 +78,10 @@
     width: 30%; /* Adjust as needed */
     height: auto;
     display: block; /* Center the image horizontally */
-    margin: 0 auto;
     position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translate(0, -50%);
+    top: 200px; /* Adjust the margin-top value to move the logo down */
+    right: 7%;
+    
 }
+
   

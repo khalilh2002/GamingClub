@@ -20,14 +20,14 @@
                 </li>
             </ul>
         </div>
-        <div class="navbar-brand drop dropdown">
+        <div class="navbar-brand drop dropdown" >
             <a href="#" role="button" data-bs-toggle="dropdown" 
                 class="nav-link dropdown-toggle" aria-expanded="false">
                 User
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Login</a></li>
-                    <li><a href="./inscription.php" class="dropdown-item">Inscription</a></li>
+                    <li><a href="login.html" class="dropdown-item">Login</a></li>
+                    <li><a href="register.html" class="dropdown-item">Register</a></li>
                 </ul>
             
         </div>

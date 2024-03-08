@@ -34,7 +34,7 @@
     ?>        
 </header>
 
-<h1 class="contacttext">Contact us</h1>
+<h1 class="contacttext title">Contact us</h1>
 
 <main >
 
