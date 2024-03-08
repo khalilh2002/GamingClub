@@ -38,7 +38,7 @@
 </body>
 <form enctype="multipart/form-data" action="upload.php" method="POST">
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
             <div class="form-floating mb-3">
                 <input type="text" name="card_title" class="form-control" placeholder="card_title"  id="cardtitleid">
                 <label for="cardtitleid">title</label>

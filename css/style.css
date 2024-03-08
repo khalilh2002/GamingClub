@@ -34,7 +34,7 @@
 .title{
     font-family: 'roboto';
     font-size: 48px;
-    color: hsl(271, 80%, 30%);
+    color: white;
 }
 .hide{
     display: none;
@@ -49,8 +49,6 @@
     background-position: top ;
     background-size: cover ;
     
-    
-
 }
 #home .container{
     min-width: 100%;
