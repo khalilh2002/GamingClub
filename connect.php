@@ -2,7 +2,7 @@
     $username="root";
     $password="";
     $serverName = "localhost";
-    $dbName = "gaming_club";
+    $dbName = "gamingclub";
 
     $conn;
     try {
@@ -13,5 +13,6 @@
         echo "". $th->getMessage() ."";
     }
 
+    
     
 ?>
