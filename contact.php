@@ -4,16 +4,19 @@
     <title>Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+       
         main{
             padding: 30px 40px;
         }
         .contacttext{
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 20vh;
-            font-size: 48px;
-            margin: 0;
+                justify-content: center;
+                align-items: center;
+                height: 20vh;
+                font-size: 48px;
+                margin: 0;
+                color: white;
+                
         }
         <?php 
           include "./css/style.css" ;
@@ -31,7 +34,7 @@
     ?>        
 </header>
 
-<h2 class="contacttext font-roboto ">Contact us</h2>
+<h1 class="contacttext">Contact us</h1>
 
 <main >
 
