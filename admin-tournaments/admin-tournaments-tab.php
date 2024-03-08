@@ -76,6 +76,9 @@
         aria-labelledby="remove-tab"
     >
          Remove 
+         <?php
+            include "./admin-tournaments/admin-tournaments-remove.php";
+        ?>
     </div>
 </div>
 
