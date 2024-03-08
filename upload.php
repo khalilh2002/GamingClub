@@ -24,25 +24,34 @@
             $card_text = $_POST["card_text"] ;
             $card_link = $_POST["link"] ;
             $card_img = $filepath;
+          
+
+            include "./connect.php";
+            $qry = 'INSERT into tournament_img (card_title , card_text , link, img_name ,img_path)
+                     VALUES("'.$card_title.'","'.$card_text.'","'.$card_link.'","'.$fileName.'","'.$filepath.'");';
+
+            $stmt = $conn->prepare($qry);
+            $stmt->execute();
+
 
             echo'
-            
-        <div class="row">
-            <div class="col-4">
-                <div class="card h-100">
-                <img src="'.$card_img.'" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">'.$card_title.'</h5>
-                <p class="card-text">'.$card_text.'
-                <a href="'.$card_link.'" class="btn btn-primary">Visit Link</a>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card h-100">
+                    <img src="'.$card_img.'" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">'.$card_title.'</h5>
+                    <p class="card-text">'.$card_text.'
+                    <a href="'.$card_link.'" class="btn btn-primary">Visit Link</a>
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
                 </div>
-                <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
                 </div>
             </div>
-            </div>
-        </div>
           ';
+          
 
 
 
