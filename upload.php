@@ -19,13 +19,13 @@
 
 
         if (move_uploaded_file($_FILES['image']['tmp_name'],$filepath)) {
-            echo"its okey it move";
+            
             $card_title = $_POST["card_title"];
             $card_text = $_POST["card_text"] ;
             $card_link = $_POST["link"] ;
             $card_img = $filepath;
           
-
+            echo"its okey it move";
             include "./connect.php";
             $qry = 'INSERT into tournament_img (card_title , card_text , link, img_name ,img_path)
                      VALUES("'.$card_title.'","'.$card_text.'","'.$card_link.'","'.$fileName.'","'.$filepath.'");';
@@ -45,7 +45,7 @@
                     <a href="'.$card_link.'" class="btn btn-primary">Visit Link</a>
                     </div>
                     <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">'.$card_img.'</small>
                     </div>
                 </div>
                 </div>
