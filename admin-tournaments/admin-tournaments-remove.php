@@ -1,13 +1,16 @@
+<div>
 <?php
-      
+     echo '</form>';
+
       include "./connect.php";
       
       $stmt = $conn->prepare("SELECT * FROM tournament_img");
       $stmt->execute();
 
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      
 
-      echo '<form action="./test.php" method="post"> ';
+      echo '<form action="delete.php" method="post">';
       echo '<div class="row row-cols-1 row-cols-md-3 g-4 tournament-items">      ';
 
       foreach ($result as $row) {
@@ -20,7 +23,9 @@
                       <h5 class="card-title">'.$row["card_title"].'</h5>
                       <p class="card-text">'.$row["card_text"].'
                       <a href="'.$row["link"].'" class="btn btn-primary">Visit Link</a>
-                      <a type="submit" name="'.$row["id_tournament"].'" class="btn btn-danger">Delete</a>
+                      
+                      <button type="submit" name = "btn" value="'.$row["id_tournament"].'" class="btn btn-danger">Delete</button>
+
                     </div>
                     <div class="card-footer">
                       <small class="text-muted">Last updated 3 mins ago</small>
@@ -33,3 +38,4 @@
       echo '</div>';
       echo '</form>';
     ?>
+</div>

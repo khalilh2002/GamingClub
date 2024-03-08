@@ -66,6 +66,7 @@
                 its not okey;
         ";
     }
+    header('location: admin-tournaments.php');
     
 ?>  
     
