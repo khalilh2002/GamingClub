@@ -151,7 +151,7 @@
       foreach ($result as $row) {
         echo'
             
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="card h-100">
                     <img src="'.$row["img_path"].'" class="card-img-top" alt="...">
                     <div class="card-body">
