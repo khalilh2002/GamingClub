@@ -44,6 +44,7 @@
         <h1 class="newstext title">News</h1>
         <div class="accordion-container">
             <div class="accordion accordion-flush" id="accordionFlushExample">
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -51,9 +52,29 @@
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Hello We Are Excited to Announce that Our FC24 Team will be Participating in The Regional FC24 Tournament That is Going to Take Place in Tangier<br>The Tournament Has Good Prizing so Please Wish Our Members Who Are Going to Participate the Best of Luck!!</div>
+                        <div class="accordion-body">
+                            Hello We Are Excited to Announce that Our FC24 Team will be Participating in The 
+                            Regional FC24 Tournament That is Going to Take Place in Tangier
+                            The Tournament Has Good Prizing so Please Wish Our Members Who Are Going to Participate the Best of Luck!!
+                            <div class="small">
+                                <?php
+                                //date_default_timezone_set('Africa/Casablanca');
+
+                                $currentTime = date('d-m-Y H:i');
+                                echo "<br>Current time in Casablanca: $currentTime";
+                                ?>
+                            </div>
+                            
+
+                        </div>
                     </div>
                 </div>
+
+
+
+
+
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -154,6 +175,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
