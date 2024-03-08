@@ -7,27 +7,37 @@
 
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-      echo '<div class="row row-cols-1 row-cols-md-3 g-4 tournament-items">      ';
-
+      echo '
+        <div class="accordion-container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+      ';
+    $result = array_reverse($result);
       foreach ($result as $row) {
         echo'
             
-                <div class="col-md-3">
-                    <div class="card h-100">
-                      <img src="'.$row["img_path"].'" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">'.$row["card_title"].'</h5>
-                      <p class="card-text">'.$row["card_text"].'
-                      <a href="'.$row["link"].'" class="btn btn-primary">Visit Link</a>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="element'.$row["id_news"].'">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#element_collapse'.$row["id_news"].'" aria-expanded="false" aria-controls="flush-collapseOne">
+                    '.$row["news_title"].'
+                </button>
+            </h2>
+            <div id="element_collapse'.$row["id_news"].'" class="accordion-collapse collapse" aria-labelledby="element'.$row["id_news"].'" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    '.$row["news_body"].'
+                    <div class="small">
+                        
+                        <br>Current time in Casablanca: '.$row["news_date"].'"
+                        
                     </div>
-                    <div class="card-footer">
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    
+
                 </div>
-                </div>
+            </div>
+        </div>
             
           ';
       }
+      echo '</div>';
       echo '</div>';
 
     ?>
