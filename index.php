@@ -13,13 +13,13 @@
         } 
 
         <?php 
-            include "./css/style.css" ;
+            include "./css/style.css";
         ?>
     </style>
     
     <!--bootstrap offline-->
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
-    <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     
     <!--- font --->
     <link rel="stylesheet" href="/css/style.css">
@@ -30,7 +30,7 @@
 <body id="body-index">
     <header>
         <?php
-            include("./navbar.php")
+            include("./navbar.php");
         ?>
     </header>
     
@@ -39,9 +39,8 @@
             <div class="row gap-4">
                 <!-- Introduction Section -->
                 <div id="intro" class="col-7">
-                    <h1 class="h1 font-dredd">Gaming CLUB 🎮</h1>
-                    <h3 class="font-honk">FST Tangier Gaming Club!!🔥⚡!</h3>
-                    <p class="lead lh-3">
+                    <h3 class="font-honk">FST Tanger Gaming Club</h3>
+                    <p class="font-roboto">
                         Discover the world of gaming with us. From tournaments to casual play, find everything you need right here.
                         Join us for events, connect with fellow gamers, and explore our diverse gaming library.
                         What are you waiting for? Join us right now!!
@@ -52,9 +51,10 @@
                     </div>
                 </div>
 
-                <!-- Image Section -->
-                <div class="col-4">
-                    <img src="./img/background.png" class="img-fluid shadow-lg" alt="" id="main-logo">
+                <!-- Logo Section -->
+                <div class="col-4"></div> <!-- Spacer column -->
+                <div class="col-4 d-flex justify-content-end">
+                    <img src="./img/logoclub.png" class="img-fluid shadow-lg" alt="Logo" id="mainlogo">
                 </div>
             </div>
         </div>

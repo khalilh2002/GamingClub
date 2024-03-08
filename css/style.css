@@ -11,18 +11,23 @@
 /*font*/
 .font-dredd{
     font-family: "dredd";
+    color: red;
+   
 }
 .font-honk{
     font-family: "Honk", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
+    font-size: xx-large;
     font-style: normal;
+    color: blue;
     font-variation-settings:
       "MORF" 15,
       "SHLN" 50;
 }
 .font-roboto{
     font-family: 'roboto';
+    font-size: x-large;
 }
 
 /*font end*/
@@ -44,7 +49,7 @@
 /*specific*/
 #body-index {
     /*background:hsl(268, 92%, 65%) ;*/
-    background-image: url("./css/cyberpunkbg.jpg") ; 
+    background-image: url("./css/LogoFull.jpg") ; 
     background-repeat: no-repeat ;
     background-position: top ;
     background-size: cover ;
@@ -68,5 +73,15 @@
     background: white(268, 92%, 70%) ;
 }
 
-
+#mainlogo {
+    max-width: 50%; /* Ensure the logo doesn't exceed its container */
+    width: 30%; /* Adjust as needed */
+    height: auto;
+    display: block; /* Center the image horizontally */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+}
   
