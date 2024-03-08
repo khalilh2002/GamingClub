@@ -34,5 +34,7 @@
         </div>
 
     </div>
+    <input type="hidden" name="data_type" value="admin-tournaments-add">
     <button type="submit" name="submit" value="Send File" class="btn btn-outline-danger">ADD</button>   
+</form>
     

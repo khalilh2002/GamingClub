@@ -13,6 +13,10 @@
 <header>
   <?php
     include "./admin-navbar.php";
+    $currentTime = date('d-m-Y');
+    echo"$currentTime";
+    
+
   ?>
 </header>
        

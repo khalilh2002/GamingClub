@@ -1,6 +1,6 @@
 <div>
 <?php
-     echo '</form>';
+
 
       include "./connect.php";
       

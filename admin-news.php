@@ -18,7 +18,7 @@
 </header>
 <main>
     <?php
-        include "./admin-news/news-tab.php";
+        include "./admin-news/admin-news-tab.php";
     ?>
 </main>
 </body>

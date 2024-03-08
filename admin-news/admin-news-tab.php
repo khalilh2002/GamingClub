@@ -53,7 +53,7 @@
         aria-labelledby="show-tab"
     >
         <?php
-            include "./admin-tournaments/admin-tournaments-show.php";
+            include "./admin-news/admin-news-show.php";
         ?>
         
     </div>
@@ -63,9 +63,9 @@
         role="tabpanel"
         aria-labelledby="add-tab"
     >
-        Add
+        
         <?php
-            include "./admin-tournaments/admin-tournaments-add.php";
+            include "./admin-news/admin-news-add.php";
         ?>
     </div>
         
@@ -76,9 +76,9 @@
         aria-labelledby="remove-tab"
     >
         
-         Remove 
+          
          <?php
-            include "./admin-tournaments/admin-tournaments-remove.php";
+            include "./admin-news/admin-news-remove.php";
         ?>
     </div>
 </div>
