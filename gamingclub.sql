@@ -119,6 +119,7 @@ CREATE TABLE IF NOT EXISTS `tournament_img` (
 -- Dumping data for table `tournament_img`
 --
 
+
 INSERT INTO `tournament_img` (`id_tournament`, `card_title`, `card_text`, `link`, `img_name`, `img_path`) VALUES
 (16, 'Persona 5 Roya', 'Persona 5 Royal is an enhanced JRPG experience with captivating storytelling, new characters, and stylish turn-based combat.', 'https://www.google.com/search?q=persona+5+royal+4x4&tbm=isch&ved=2ahUKEwiCof-gxOiEAxUduCcCHcsqCn4Q2-cCegQIABAA&oq=persona+5+royal+4x4&gs_lp=EgNpbWciE3BlcnNvbmEgNSByb3lhbCA0eDRIpRBQhgRY-A1wAHgAkAEAmAGOAaAB9ASqAQMwLjW4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ8ICBRAAGIAEwgIGEAAYCBgewgIHEAAYgAQYGIgGAQ&sclient=img&ei=dQvtZcKSN53wnsEPy9Wo8Ac&bih=641&biw=1366#imgrc=JarVQTKhP9n8kM', 'person5.jpg', './img/upload/person5.jpg'),
 (17, 'Devil May Cry 3: Dante\'s Awakening', 'Devil May Cry 3 is an action-packed hack-and-slash video game developed by Capcom, known for its intense combat, stylish combos, and the origin story of the iconic protagonist, Dante.', 'https://www.letras.com/persona-4/1581951/', 'Devil_May_Cry_3_boxshot.jpg', './img/upload/Devil_May_Cry_3_boxshot.jpg'),
@@ -147,3 +148,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
