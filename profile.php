@@ -87,8 +87,6 @@
               <label name="username" class="form-label"><?= $result2[0]["email"] ?></label>
 
             </div>
-            
-            
           </form>
         </div>
       </div>
