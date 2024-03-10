@@ -82,14 +82,22 @@
 }
 
 #mainlogo {
-    max-width: 50%; /* Ensure the logo doesn't exceed its container */
-    width: 30%; /* Adjust as needed */
-    height: auto;
-    display: block; /* Center the image horizontally */
-    position: absolute;
-    top: 200px; /* Adjust the margin-top value to move the logo down */
-    right: 7%;
-    
+    max-width: 30vw; /* Set a maximum width for the logo */
+    width: 30vw; /* Set the initial width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Display the logo inline with text */
+    position: absolute; /* Position the logo absolutely */
+    top: 200px; /* Reset top position */
+    right: 150px; /* Adjust the distance from the right side of its container */
 }
 
-  
+/* Media query for adjusting the logo size on smaller screens */
+@media (max-width: 768px) {
+    #mainlogo {
+        width: 30%; /* Adjust the width for smaller screens */
+        right: 5px; /* Adjust the distance for smaller screens */
+        position: absolute; /* Change position to relative for smaller screens */
+        top: auto; /* Reset top position for smaller screens */
+    }
+}
+
