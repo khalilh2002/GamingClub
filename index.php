@@ -65,7 +65,7 @@
     <header>
         <?php include_once("./navbar.php"); ?>
     </header>
-    <h1 class="homepage-txt title">Homepage</h1>
+    <h1 class="homepage-txt title " >Homepage</h1>
     <section id="home">
         <div class="container-xl pt-5">
             <div class="row gap-4">
