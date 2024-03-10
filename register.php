@@ -105,6 +105,8 @@
 <body >
 <div id="background"></div> <!-- This will serve as the blurred background -->
 <div class="signup-form" >
+
+
     <form action="./upload.php" method="post">
 		<h2>Sign Up</h2>
 		<p>Please fill in this form to create an account!</p>
@@ -128,7 +130,8 @@
         <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
 		</div>
 		<div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            <input type="hidden" name="data_type" value="register">
+            <button type="submit" class="btn btn-primary btn-lg" name="submit">Sign Up</button>
         </div>
     </form>
 </div>
