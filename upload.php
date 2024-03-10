@@ -21,13 +21,17 @@
         if (isset($_POST["first_name"],$_POST["last_name"],$_POST["email"],$_POST["username"],$_POST["password"] ,$_POST["submit"])){
             
             $first_name=$_POST["first_name"];
-            $last=$_POST["last_name"];
+            $last_name=$_POST["last_name"];
             $email=$_POST["email"];
             $username=$_POST["username"];
             $password=$_POST["password"];
-            echo "not in 2";
-            add_login($conn , $username , $password);
+            $last_id = add_login($conn , $username , $password);
+            $qry = 'INSERT INTO login (first_name , last_name,email,id_login)
+                VALUES( "'.$first_name.'" , "'.$last_name.'","'.$email.'",'.$last_id.' )';
             
+            
+
+
             
         }else{
             echo "not in";
@@ -38,7 +42,11 @@
                 VALUES( "'.$username.'" , "'.$password.'" )';
         $stmt = $conn->prepare($qry);
         if (!$stmt->execute()) {
-           echo "error login";
+            $stmt->prepare("SELECT LAST_INSERT_ID();");
+            if ($stmt->execute()) {
+                 $last_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                 return $last_id;
+           }
         }
     }
 
