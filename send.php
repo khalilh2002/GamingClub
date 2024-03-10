@@ -58,25 +58,26 @@
         $content = "From : $firstName $lastName \r\n objet : $sujet \r\n".$message."\n";
         
         if (sendMail($mail , $user,$pass,$user,$user,$sujet,$content)) {
-            echo"
+            ?>
             <script>
                 alert('send ok');
                 window.location.href='contact.html';
 
             </script>
-            ";
+            <?php
+
             sendMail($mail,$user ,$pass ,$user ,$email,"message bien reussit","nous avons reussit votre message \n nous sommes tres heureux :)");
             
         }  
     }else {
-        echo"
+        ?>
         <script>
             alert('error');
             window.location.href='./contact';
         </script>
 
         <h1></h1>
-        "; 
+        <?php
     }
 
 

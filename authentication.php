@@ -8,7 +8,8 @@
         case 'login-admin':
             admin_login($conn);
         default:
-            # code...
+            echo " <script> window.alert('the data_type is not been recognized please check the form'); </script> ";
+            header("location: ./index.php");
             break;
     }
 
