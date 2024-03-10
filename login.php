@@ -27,7 +27,7 @@
       </p>
     </form>
   <div id="create-account-wrap">
-    <p>Not a member? <a href="#">Create Account</a><p>
+    <p>Not a member? <a href="register.php">Create Account</a><p>
   </div><!--create-account-wrap-->
 </div><!--login-form-wrap-->
 <!-- partial -->
