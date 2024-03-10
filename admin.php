@@ -32,8 +32,19 @@ if (isset($_SESSION["id"])){
       exit;
     }
     ?>
-    <h2>Welcome Admin : <?= $result[0]["username"] ?></h2>
+    <h1 style="font-family: 'roboto'; display: flex;
+              justify-content: center;
+              align-items: center;
+              color:blue;
+              margin-top:30px;">Admin Control Panel</h1>
+    <h2 style="font-family: 'roboto';display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top:25px;
+              margin-bottom:20px"><p>Welcome Admin :</p><p style="width: 5px;";> </p> <p style="color: red;" > <?= $result[0]["username"] ?> </p></h2>
     <div>
+      <h4 style="font-family: 'roboto';
+      margin-left: 10px;">List of Admins:</h4>
       <table class="table">
         <thead class="table-dark">
           <td>Id</td>
