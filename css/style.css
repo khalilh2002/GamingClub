@@ -8,6 +8,14 @@
     font-family: 'roboto';
     src: url(./css/Roboto/Roboto-Bold.ttf) ;
 }
+@font-face{
+    font-family: 'oswald';
+    src: url(./css/Oswald/Oswald-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./css/Montserrat/Montserrat.ttf);
+}
 /*font*/
 .font-dredd{
     font-family: "dredd";

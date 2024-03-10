@@ -15,9 +15,7 @@
                 <li class="nav-item">
                     <a href="tournaments.php" aria-current="page" class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == 'tournaments.php') echo 'active'; ?>">Tournaments</a>
                 </li>
-                <li class="nav-item">
-                    <a href="contact.php" aria-current="page" class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == 'contact.php') echo 'active'; ?>">Contact Us</a>
-                </li>
+               
             </ul>
         </div>
         <div class="navbar-brand d-flex gap-3" >

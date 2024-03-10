@@ -78,6 +78,7 @@
                         What are you waiting for? Join us right now!!
                     </p>
                     <div class="d-grid d-md-flex gap-2 justify-content-md-end pt-3" id="bouttonHome">
+                    <a href="#contactus" class="z-3 btn btn-lg btn-primary">Contact Us</a>
                         <a href="#aboutus" class="z-3 btn btn-lg btn-primary">About Us</a>
                     </div>
                 </div>
@@ -98,7 +99,7 @@
 
     <section id="aboutus">
     <div class="container">
-        <h2 class="font-honk">About Us</h2>
+        <h2  class="homepage-txt title">About Us</h2>
         <div class="aboutus-content">
             <div class="font-roboto">
                 <p>
@@ -137,12 +138,13 @@
             </div>
         </div>
     </div>
-<section class="p-4">
+    </section>
+    <section id="contactus">
     <?php
         include_once "./contact.php";
     ?>
-</section>
-</section>
+    </section>
+
 
     <script>
         // Smooth scrolling for anchor links
