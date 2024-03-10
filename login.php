@@ -15,15 +15,17 @@
 <div id="background"></div> <!-- This will serve as the blurred background -->
   <div id="login-form-wrap">
     <h2>Login</h2>
-    <form id="login-form" method="post" action="">
+    <form id="login-form" method="post" action="./authentication.php">
       <p>
       <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
       </p>
       <p>
-      <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+      <input type="password" id="password" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
       </p>
       <p>
-      <input type="submit" id="login" value="login">
+      <input type="hidden" name="data_type" value="login">
+      <input type="submit" name="login" id="login" value="Login">
+      
       </p>
     </form>
   <div id="create-account-wrap">

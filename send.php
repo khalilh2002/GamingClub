@@ -72,7 +72,7 @@
         echo"
         <script>
             alert('error');
-            window.location.href='contact.html';
+            window.location.href='./contact';
         </script>
 
         <h1></h1>

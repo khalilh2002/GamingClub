@@ -55,9 +55,11 @@
             
                 echo"its okey it move";
                 include_once "./connect.php";
+
                 $qry = 'INSERT into tournament_img (card_title , card_text , link, img_name ,img_path)
                         VALUES("'.$card_title.'","'.$card_text.'","'.$card_link.'","'.$fileName.'","'.$filepath.'");';
-
+                echo $qry;
+                
                 $stmt = $conn->prepare($qry);
                 if (!$stmt->execute()) {
                     exit; 
