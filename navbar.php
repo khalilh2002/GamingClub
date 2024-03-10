@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
         <a href="./admin.php" class="navbar-brand">
-            <img src="img/logoclub.png" alt="Gaming Club" width="24" height="24">
+            <img src="img/logoclub.png" alt="Gaming Club" width="24" height="24" id="logoimg" onerror="loadimg()">
             Gaming Club
         </a>
         <div class="collapse navbar-collapse navbar-brand" id="navbar001">
@@ -29,3 +29,9 @@
         <script src="https://kit.fontawesome.com/90297b3c39.js" crossorigin="anonymous"></script>
     </div>
 </nav>
+
+<script>
+    function loadimg(){
+        document.getElementById('logoimg').src = "../img/logoclub.png";
+    }
+</script>

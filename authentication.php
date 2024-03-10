@@ -31,7 +31,7 @@ function admin_login($conn){
         if (count($result)==1) {
             $_SESSION['id']=$result[0]["id_login_admin"];
             $_SESSION['username']=$result[0]["username"];
-            print_r($_SESSION);
+
             header("location: ./admin.php?id=".$result[0]["id_login_admin"]."");
         }else{
             header("location: ./admin-login/admin-login.php");
@@ -61,7 +61,10 @@ function normal_login($conn){
                 //admin
                 header('location: ./admin-login/admin-login.php');
             }else{
-                header('location: index.php');
+                $_SESSION['id_user']=$result[0]["id_login"];
+                $_SESSION['username_user']=$result[0]["username"];
+                
+                header('location: ./profile.php?id='.$result[0]["id_login"]);
             }
             
         }else{
