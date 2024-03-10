@@ -63,7 +63,7 @@
 </head>
 <body id="body-index">
     <header>
-        <?php include("./navbar.php"); ?>
+        <?php include_once("./navbar.php"); ?>
     </header>
     <h1 class="homepage-txt title">Homepage</h1>
     <section id="home">
@@ -137,6 +137,11 @@
             </div>
         </div>
     </div>
+<section class="p-4">
+    <?php
+        include_once "./contact.php";
+    ?>
+</section>
 </section>
 
     <script>
