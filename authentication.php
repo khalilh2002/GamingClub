@@ -1,12 +1,12 @@
 <?php
     require_once("./connect.php");
-
     switch ($_POST["data_type"]) {
         case 'login':
             normal_login($conn);
             break;
         case 'login-admin':
             admin_login($conn);
+            break;
         default:
             echo " <script> window.alert('the data_type is not been recognized please check the form'); </script> ";
             header("location: ./index.php");
@@ -31,6 +31,8 @@ function admin_login($conn){
             
         }
 
+    }else{
+        print_r($_POST);
     }
 }
 
@@ -55,8 +57,12 @@ function normal_login($conn){
                 header('location: index.php');
             }
             
+        }else{
+            header("location: login.php");
         }
-    }  
+    }else{
+        print_r($_POST);
+    }
 }
     
 ?>
