@@ -1,4 +1,8 @@
 <?php
+    session_start();
+?>
+
+<?php
     require_once("./connect.php");
     switch ($_POST["data_type"]) {
         case 'login':
@@ -25,7 +29,10 @@ function admin_login($conn){
         }
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (count($result)==1) {
-            header("location: ./admin.php");
+            $_SESSION['id']=$result[0]["id_login_admin"];
+            $_SESSION['username']=$result[0]["username"];
+            print_r($_SESSION);
+            header("location: ./admin.php?id=".$result[0]["id_login_admin"]."");
         }else{
             header("location: ./admin-login/admin-login.php");
             
