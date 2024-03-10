@@ -28,14 +28,18 @@
             echo "not in 2";
             add_login($conn , $username , $password);
             
+            
         }else{
             echo "not in";
         }
     }
     function add_login($conn,$username , $password){
         $qry = 'INSERT INTO login (username , pass)
-                VALUES( '.$username.' , '.$password.' )';
-        echo $qry;
+                VALUES( "'.$username.'" , "'.$password.'" )';
+        $stmt = $conn->prepare($qry);
+        if (!$stmt->execute()) {
+           echo "error login";
+        }
     }
 
     function add_news($conn){
