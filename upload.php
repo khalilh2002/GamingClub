@@ -26,13 +26,15 @@
             $username=$_POST["username"];
             $password=$_POST["password"];
             $last_id = add_login($conn , $username , $password);
-            $qry = 'INSERT INTO login (first_name , last_name,email,id_login)
+            $qry = 'INSERT INTO users (first_name , last_name,email,id_login)
                 VALUES( "'.$first_name.'" , "'.$last_name.'","'.$email.'",'.$last_id.' )';
-            
-            
-
-
-            
+            echo "$qry";
+            $stmt = $conn->prepare($qry);
+            if ($stmt->execute()){
+                header("location: ./login.php");
+            }else{
+                echo "error in users id";
+            }
         }else{
             echo "not in";
         }
@@ -40,13 +42,18 @@
     function add_login($conn,$username , $password){
         $qry = 'INSERT INTO login (username , pass)
                 VALUES( "'.$username.'" , "'.$password.'" )';
+
         $stmt = $conn->prepare($qry);
-        if (!$stmt->execute()) {
-            $stmt->prepare("SELECT LAST_INSERT_ID();");
-            if ($stmt->execute()) {
-                 $last_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                 return $last_id;
-           }
+
+        if ($stmt->execute()) {
+            $qry = 'SELECT id_login FROM login 
+                    WHERE username = "'.$username.'"  AND pass ="'.$password.'" ';
+            $stmt = $conn->prepare($qry);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result[0]["id_login"];
+
+
         }
     }
 

@@ -12,7 +12,7 @@
     } catch (\Throwable $th) {
         echo "". $th->getMessage() ."";
     }
-    
+
 
     
     
