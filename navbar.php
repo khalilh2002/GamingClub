@@ -20,17 +20,11 @@
                 </li>
             </ul>
         </div>
-        <div class="navbar-brand drop dropdown" >
-            <a href="#" role="button" data-bs-toggle="dropdown" 
-                class="nav-link dropdown-toggle" aria-expanded="false">
-                User
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="login.php" class="dropdown-item">Login</a></li>
-                    <li><a href="register.php" class="dropdown-item">Register</a></li>
-                </ul>
-            
+        <div class="navbar-brand drop dropdown d-flex gap-3" >
+        <a href="login.php" class="dropdown-item">Login</a>
+        <a href="register.php" class="dropdown-item">Register</a>
         </div>
+
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">
             <i class="fa-solid fa-bars"></i>
         </button>
