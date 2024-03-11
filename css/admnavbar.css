@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'dredd';
+    src: 
+        url(./css/dredd/dredd.otf);
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(./css/Roboto/Roboto-Bold.ttf) ;
+}
+@font-face{
+    font-family: 'oswald';
+    src: url(./css/Oswald/Oswald-Bold.ttf);
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./css/Montserrat/Montserrat.ttf);
+}
+/*font*/
+.font-dredd{
+    font-family: "dredd";
+    color: red;
+   
+}
+.font-honk{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+    color: blue;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+}
+.font-roboto{
+    font-family: 'roboto';
+    font-size: x-large;
+    color: white;
+}

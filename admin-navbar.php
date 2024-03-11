@@ -17,13 +17,17 @@
   }
   
 ?>
+<style><?php 
+            include "./css/admnavbar.css";
+        ?>
+    </style>
 <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
-    <a class="navbar-brand" href="./admin.php">Admin</a>
+    <a style = "font-family: 'roboto';" class="navbar-brand" href="./admin.php">Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+    <div class="collapse navbar-collapse" id="navbarNav" style="font-family: 'roboto';">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link " aria-current="page" href="./admin-tournaments.php">tournaments</a>
