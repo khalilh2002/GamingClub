@@ -145,6 +145,7 @@
         include_once "./contact.php";
     ?>
     </section>
+   
 
 
     <script>

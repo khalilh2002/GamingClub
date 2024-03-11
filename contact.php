@@ -7,6 +7,8 @@
        
         main{
             padding: 30px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .contacttext{
             display: flex;
