@@ -43,20 +43,37 @@ if (isset($_SESSION["id"])){
               margin-top:25px;
               margin-bottom:20px"><p>Welcome Admin :</p><p style="width: 5px;";> </p> <p style="color: red;" > <?= $result[0]["username"] ?> </p></h2>
     <div>
-      <h4 style="font-family: 'roboto';
-      margin-left: 10px;">List of Admins:</h4>
-      <table class="table">
-        <thead class="table-dark">
-          <td>Id</td>
-          <td>Username</td>
-        </thead>
-        <tbody>
-          <td><?=  $result[0]["id_login_admin"] ;?></td>
-          <td><?=  $result[0]["username"] ;?></td>
+      
+      
+    
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
 
-        </tbody>
-      </table>    
+      <div class="card">
+      <img class="align-self-center justify-self-center" src="./img/profile.png" alt="" srcset="" width="150px">
+        <div class="card-header">
+          <h3 class="text-center">My Profile</h3>
+        </div>
+        <div class="card-body">
+          <form>
+          <div class="mb-3">
+              <label for="username" class="form-label">id:</label>
+              <label name="username" class="form-label"><?=  $result[0]["id_login_admin"] ;?></label>
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username:</label>
+              <label name="username" class="form-label"><?=  $result[0]["username"] ;?></label>
+            </div>
+            
+
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 <?php } ?>
 
