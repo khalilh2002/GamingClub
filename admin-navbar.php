@@ -36,7 +36,7 @@
           <a class="nav-link" href="./admin-news.php">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">USERS</a>
+          <a class="nav-link" href="./admin-users.php">USERS</a>
         </li>
       </ul>
       

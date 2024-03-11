@@ -66,9 +66,9 @@
     <header>
         <?php include_once("./navbar.php"); ?>
     </header>
-    <h1 class="homepage-txt title " >Homepage</h1>
+    
     <section id="home">
-        <div class="container-xl pt-5">
+        <div class="container-xl pt-5 mt-5">
             <div class="row gap-4">
                 <!-- Introduction Section -->
                 <div id="intro" class="col-7">
@@ -79,15 +79,14 @@
                         What are you waiting for? Join us right now!!
                     </p>
                     <div class="d-grid d-md-flex gap-2 justify-content-md-end pt-3" id="bouttonHome">
-                    <a href="#contactus" class="z-3 btn btn-lg btn-primary">Contact Us</a>
+                        <a href="#contactus" class="z-3 btn btn-lg btn-primary">Contact Us</a>
                         <a href="#aboutus" class="z-3 btn btn-lg btn-primary">About Us</a>
                     </div>
                 </div>
 
                 <!-- Logo Section -->
-                <div class="col-4"></div> <!-- Spacer column -->
-                <div class="col-4 d-flex justify-content-end">
-                    <img src="./img/logoclub.png"  alt="Logo" id="mainlogo">
+                <div class="col-4">
+                    <img src="./img/logoclub.png"  alt="Logo" id="mainlogo1" class="img-thumbnail bg-transparent border-0">
                 </div>
             </div>
         </div>
