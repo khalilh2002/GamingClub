@@ -68,7 +68,7 @@
     </header>
     
     <section id="home">
-        <div class="container-xl pt-5">
+        <div class="container-xl pt-5 mt-5">
             <div class="row gap-4">
                 <!-- Introduction Section -->
                 <div id="intro" class="col-7">
