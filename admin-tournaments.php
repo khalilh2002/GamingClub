@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
 </head>
-<body>
+<body class="bg-info-subtle">
     <header>
         <?php
         include "./admin-navbar.php"; 
         ?> 
     </header>
-    <div id="admin-tournament-tab">
+    <div id="admin-tournament-tab" >
         <?php
         // include "./connect.php";
         include "./admin-tournaments/admin-tournaments-tab.php"; 

@@ -10,7 +10,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <form action="delete.php" method="post">
-  <div class="row row-cols-1 row-cols-md-3 g-4 tournament-items">
+  <div class="row row-cols-1 row-cols-md-3 g-4 tournament-items p-5">
 
     <?php foreach ($result as $row): ?>
 

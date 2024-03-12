@@ -16,6 +16,7 @@
             header("location: ./index.php");
             break;
     }
+    
 
 function admin_login($conn){
     if (isset($_POST["username"] , $_POST["password"] , $_POST["data_type"]) && $_POST["data_type"]=="login-admin") {
@@ -31,6 +32,8 @@ function admin_login($conn){
         if (count($result)==1) {
             $_SESSION['id']=$result[0]["id_login_admin"];
             $_SESSION['username']=$result[0]["username"];
+            $_SESSION['last_activity'] = time();
+
 
             header("location: ./admin.php?id=".$result[0]["id_login_admin"]."");
         }else{

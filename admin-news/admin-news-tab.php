@@ -1,5 +1,5 @@
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-pills nav-fill p-3 border-1" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <button
             class="nav-link active"
