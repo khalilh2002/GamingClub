@@ -1,6 +1,7 @@
 <?php
-session_start(); // Start session
-
+if (!session_status()=== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 
 ?>
 <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
@@ -24,13 +25,14 @@ session_start(); // Start session
         </div>
         <div class="navbar-brand d-flex gap-3" >
             <?php
-            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-                echo '<span>Welcome, ' . $_SESSION['username'] . '</span>';
+            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                echo '<span>Welcome, ' . $_SESSION['username_user'] . '</span>';
                 echo '<a href="logout.php" class="dropdown-item">Log Off</a>';
             } else {
                 echo '<a href="login.php" class="dropdown-item">Login</a>';
                 echo '<a href="register.php" class="dropdown-item">Register</a>';
             }
+            session_write_close();
             ?>
         </div>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">
@@ -48,5 +50,5 @@ session_start(); // Start session
 <?php
 
 // Close the session
-session_write_close();
+
 ?>
