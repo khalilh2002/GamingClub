@@ -1,5 +1,7 @@
 <?php
   require "./connect.php";
+  require_once "./SessionTimout.php";
+
   session_start();
 
   if (isset($_SESSION['id'] , $_SESSION['username'])) {
@@ -21,7 +23,7 @@
             include "./css/admnavbar.css";
         ?>
     </style>
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-info p-3">
   <div class="container-fluid">
     <a style = "font-family: 'roboto';" class="navbar-brand" href="./admin.php">Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarNav" style="font-family: 'roboto';">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="./admin-tournaments.php">tournaments</a>
+          <a class="nav-link " aria-current="page" href="./admin-tournaments.php">Tournaments</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./admin-news.php">News</a>

@@ -1,9 +1,9 @@
-<form enctype="multipart/form-data" action="upload.php" method="POST">
-    <div class="row">
+<form enctype="multipart/form-data" action="upload.php" method="POST" class="p-2">
+    <div class="row ">
         <div class="col-md-6">
             <div class="form-floating mb-3">
                 <input type="text" name="card_title" class="form-control" placeholder="card_title"  id="cardtitleid">
-                <label for="cardtitleid">title</label>
+                <label for="cardtitleid">Title</label>
             </div>
         </div>
         <div class="col-6">
@@ -15,8 +15,9 @@
         </div>
         <div class="col-12">
             <div class="mb-3">
-                <label for="card_text" class="form-label">Description</label>
-                <textarea class="form-control" name="card_text" id="cardtextid" rows="5"></textarea>
+                <textarea class="form-control" name="card_text" id="cardtextid" rows="5" placeholder="Description"></textarea>
+
+                
             </div> 
         </div>
         <div class="col-12">
@@ -28,7 +29,7 @@
                     id="linkid"
                     placeholder="url"
                 />
-                <label for="link">url</label>
+                <label for="link">URL</label>
             </div>
             
         </div>

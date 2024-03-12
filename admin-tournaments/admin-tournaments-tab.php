@@ -1,5 +1,5 @@
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-pills nav-fill p-3 fw-bold " id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <button
             class="nav-link active"
@@ -10,8 +10,7 @@
             role="tab"
             aria-controls="home"
             aria-selected="true"
-        >
-            Show
+        >Show
         </button>
     </li>
     <li class="nav-item" role="presentation">
@@ -63,7 +62,6 @@
         role="tabpanel"
         aria-labelledby="add-tab"
     >
-        Add
         <?php
             include "./admin-tournaments/admin-tournaments-add.php";
         ?>
@@ -76,7 +74,6 @@
         aria-labelledby="remove-tab"
     >
         
-         Remove 
          <?php
             include "./admin-tournaments/admin-tournaments-remove.php";
         ?>

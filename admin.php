@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
 </head>
-<body>
+<body >
 
 <header>
   <?php
@@ -18,7 +18,7 @@
     
   ?>
 </header>
-<main>
+<main >
 <?php
 if (isset($_SESSION["id"])){
     $id = $_SESSION["id"];
@@ -32,6 +32,7 @@ if (isset($_SESSION["id"])){
       exit;
     }
     ?>
+    <div class="d-none">
     <h1 style="font-family: 'roboto'; display: flex;
               justify-content: center;
               align-items: center;
@@ -42,10 +43,15 @@ if (isset($_SESSION["id"])){
               align-items: center;
               margin-top:25px;
               margin-bottom:20px"><p>Welcome Admin :</p><p style="width: 5px;";> </p> <p style="color: red;" > <?= $result[0]["username"] ?> </p></h2>
-    <div>
-      
-      
     
+    </div>
+    <h1 style="font-family: 'roboto'; display: flex;
+              justify-content: center;
+              align-items: center;
+              
+              margin-top:30px;" class="text-primary h2">Admin Control Panel</h1>
+    <div>
+
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -53,7 +59,7 @@ if (isset($_SESSION["id"])){
       <div class="card">
       <img class="align-self-center justify-self-center" src="./img/profile.png" alt="" srcset="" width="150px">
         <div class="card-header">
-          <h3 class="text-center">My Profile</h3>
+          <h3 class="text-center">Profile : <?= $result[0]["username"]  ?> </h3>
         </div>
         <div class="card-body">
           <form>

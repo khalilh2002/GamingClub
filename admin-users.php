@@ -9,21 +9,21 @@
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
 
 </head>
-<body>
+<body class="bg-info-subtle">
     <header>
         <?php
             include_once "./admin-navbar.php";
         ?>
     </header>
-        <main>
+        <main >
             <?php
                 $qry = 'SELECT * 
                 FROM users LEFT JOIN login ON users.id_login = login.id_login;';
                 $stmt  = $conn->prepare($qry);
             ?>
                 
-                <table class="table table-dark table-striped">
-                    <thead>
+                <table class="table table-bordered  table-centered ">
+                    <thead class="table-dark">
                         <td>user ID</td>
                         <td>First Name</td>
                         <td>Last Name</td>

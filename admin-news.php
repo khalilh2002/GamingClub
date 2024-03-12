@@ -9,7 +9,7 @@
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.js" ></script>
 
 </head>
-<body class="bg-body-secondary">
+<body class="bg-info-subtle">
 
 <header>
   <?php
