@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>Bootstrap Simple Login Form with Blue Background</title>
+<title>Register</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
@@ -100,10 +100,27 @@
       filter: blur(5px); /* Apply the blur effect to the background */
       z-index: -1; /* Ensure the background is behind other content */
     }
+	#home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 9999;
+      font-size: 26px; /* Adjust the font size to increase the button size */
+    }
+	#home-button .fa-door-closed {
+      color: #037ffc; /* Change color to black on hover */
+    }
+	#home-button:hover .fa-door-closed {
+      color: gray; /* Change color to black on hover */
+    }
 </style>
 </head>
 <body >
 <div id="background"></div> <!-- This will serve as the blurred background -->
+<a href="./index.php" id="home-button">
+    <i class="fas fa-door-closed" ></i>
+</a>
 <div class="signup-form" >
 
 
@@ -135,5 +152,6 @@
         </div>
     </form>
 </div>
+<script src="https://kit.fontawesome.com/2c68a7a0e8.js" crossorigin="anonymous"></script>
 </body>
 </html>
