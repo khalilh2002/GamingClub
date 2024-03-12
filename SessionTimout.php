@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $timeout = 30 * 60 ;//30min 
+    $timeout = 30*60;//30min 
     if (isset($_SESSION["last_activity"],$_SESSION["id"],$_SESSION["username"])) {
         if ( (time()-$_SESSION["last_activity"]) > $timeout) {
             session_unset();

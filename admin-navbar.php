@@ -52,7 +52,7 @@
 <?php
   if (isset($_POST["logout"]) && $_POST["logout"] == "end" && $_SERVER['REQUEST_METHOD']=='POST') {
       session_destroy();
-      header("location: ./admin.php");
+      header("location: ./index.php");
       exit();
   }
 ?>

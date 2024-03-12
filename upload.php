@@ -28,7 +28,6 @@
             $last_id = add_login($conn , $username , $password);
             $qry = 'INSERT INTO users (first_name , last_name,email,id_login)
                 VALUES( "'.$first_name.'" , "'.$last_name.'","'.$email.'",'.$last_id.' )';
-            echo "$qry";
             $stmt = $conn->prepare($qry);
             if ($stmt->execute()){
                 header("location: ./login.php");
@@ -109,23 +108,6 @@
                     exit; 
                 }
                 
-                echo'
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="card h-100">
-                            <img src="'.$card_img.'" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">'.$card_title.'</h5>
-                            <p class="card-text">'.$card_text.'
-                            <a href="'.$card_link.'" class="btn btn-primary">Visit Link</a>
-                            </div>
-                            <div class="card-footer">
-                            <small class="text-muted">'.$card_img.'</small>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                ';
             
             }else{
                 echo"oh noooooooooooooooooo";

@@ -61,7 +61,7 @@
             ?>
             <script>
                 alert('send ok');
-                window.location.href='contact.html';
+                window.location.href='index.php';
 
             </script>
             <?php
