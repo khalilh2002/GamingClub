@@ -1,3 +1,8 @@
+<?php
+session_start(); // Start session
+
+
+?>
 <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
         <a href="./admin.php" class="navbar-brand">
@@ -15,13 +20,18 @@
                 <li class="nav-item">
                     <a href="tournaments.php" aria-current="page" class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == 'tournaments.php') echo 'active'; ?>">Tournaments</a>
                 </li>
-               
             </ul>
         </div>
         <div class="navbar-brand d-flex gap-3" >
-            <a href="login.php" class="dropdown-item">Login</a>
-            <a href="register.php" class="dropdown-item">Register</a>
-            
+            <?php
+            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+                echo '<span>Welcome, ' . $_SESSION['username'] . '</span>';
+                echo '<a href="logout.php" class="dropdown-item">Log Off</a>';
+            } else {
+                echo '<a href="login.php" class="dropdown-item">Login</a>';
+                echo '<a href="register.php" class="dropdown-item">Register</a>';
+            }
+            ?>
         </div>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar001">
             <i class="fa-solid fa-bars"></i>
@@ -35,3 +45,8 @@
         document.getElementById('logoimg').src = "../img/logoclub.png";
     }
 </script>
+<?php
+
+// Close the session
+session_write_close();
+?>

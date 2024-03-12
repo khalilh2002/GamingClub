@@ -66,6 +66,7 @@ function normal_login($conn){
             }else{
                 $_SESSION['id_user']=$result[0]["id_login"];
                 $_SESSION['username_user']=$result[0]["username"];
+                $_SESSION['logged_in'] = true;
                 
                 header('location: ./profile.php?id='.$result[0]["id_login"]);
             }

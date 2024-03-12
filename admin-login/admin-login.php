@@ -23,7 +23,7 @@
     </style>
 </head>
 <body >
-<a href="index.php" id="home-button">
+<a href="../index.php" id="home-button">
     <i class="fas fa-door-closed"></i>
   </a>
     <div class="container mt-5">
