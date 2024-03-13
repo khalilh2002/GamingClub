@@ -107,6 +107,11 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
             background-size: cover;
             background-position: center;
         }
+         /* Adjust width and height of file input */
+    #profile_picture {
+        width: 240px; /* Adjust width according to content */
+        height: 40px; /* Increase height */
+    }
     </style>
 </head>
 
@@ -149,11 +154,11 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
                                 <label for="email" class="form-label">Email:</label>
                                 <label name="username" class="form-label"><?= $result2[0]["email"] ?></label>
                             </div>
-                            <div class="mb-3">
-                                <label for="profile_picture" class="form-label">Profile Picture:</label>
-                                <input type="file" class="form-control" id="profile_picture" name="profile_picture">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Upload Picture</button>
+                            <div class="mb-3 d-flex align-items-center">
+    <label for="profile_picture" class="form-label me-3">Profile Picture:</label>
+    <input type="file" class="form-control me-3" id="profile_picture" name="profile_picture">
+    <button type="submit" class="btn btn-primary">Upload Picture</button>
+</div>
                         </form>
                     </div>
                 </div>
