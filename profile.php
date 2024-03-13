@@ -129,7 +129,9 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
   filter: blur(5px); /* Apply the blur effect to the background */
   z-index: -1; /* Ensure the background is behind other content */
 }
-
+<?php 
+            include "./css/style.css";
+        ?>
     </style>
 </head>
 
