@@ -69,7 +69,12 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
             $updateStmt = $conn->prepare($updateQry);
             $updateStmt->bindParam(':profile_picture', $filePath);
             $updateStmt->execute();
-            echo "The file ". htmlspecialchars(basename($_FILES["profile_picture"]["name"])). " has been uploaded.";
+            ?>
+            <SCript>
+                window.alert("The file <?= htmlspecialchars(basename($_FILES["profile_picture"]["name"])) ?> has been uploaded");
+            </SCript>
+            <?php
+            header('location: ./profile.php');   
         } else {
             echo "Sorry, there was an error uploading your file.";
             // Get more information about the error
