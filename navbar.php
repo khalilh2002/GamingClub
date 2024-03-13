@@ -6,7 +6,7 @@ if (!session_status()=== PHP_SESSION_ACTIVE) {
 ?>
 <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-        <a href="./admin.php" class="navbar-brand">
+        <a href="" class="navbar-brand">
             <img src="img/logoclub.png" alt="Gaming Club" width="24" height="24" id="logoimg" onerror="loadimg()">
             Gaming Club
         </a>
@@ -27,7 +27,8 @@ if (!session_status()=== PHP_SESSION_ACTIVE) {
             <?php
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 echo '<span>Welcome, ' . $_SESSION['username_user'] . '</span>';
-                echo '<a href="logout.php" class="dropdown-item">Log Off</a>';
+                echo '<a href="profile.php" aria-current="page" class="nav-link >">My Profile</a>';
+                echo '<a href="logout.php" class="dropdown-item">Log Out</a>';
             } else {
                 echo '<a href="login.php" class="dropdown-item">Login</a>';
                 echo '<a href="register.php" class="dropdown-item">Register</a>';
