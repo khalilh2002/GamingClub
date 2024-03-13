@@ -15,7 +15,7 @@
             include_once "./admin-navbar.php";
         ?>
     </header>
-        <div class="d-flex justify-content-center m-3">
+        <div class="d-flex justify-content-center m-3 ">
             <form class="d-flex" role="search" method="get" action="admin-users.php">
                 <input class="form-control me-2" type="search" placeholder="Search" name="search_text" aria-label="Search">
                 <button class="btn btn-success" type="submit" name="search" value="search" >Search</button>
