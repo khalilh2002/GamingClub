@@ -8,12 +8,11 @@
         </div>
         <div class="col-12">
             <div class="mb-3">
-                <label for="card_text" class="form-label">News Body</label>
-                <textarea class="form-control" name="news_body" id="cardtextid" rows="5"></textarea>
+                <textarea class="form-control" name="news_body" id="cardtextid" rows="5" placeholder="News Body"></textarea>
             </div> 
         </div>
 
     </div>
     <input type="hidden" name="data_type" value="admin-news-add">
-    <button type="submit" name="submit" value="Send File" class="btn btn-outline-danger">ADD</button>   
+    <button type="submit" name="submit" value="Send File" class="btn btn-info btn-lg">ADD</button>   
 </form>

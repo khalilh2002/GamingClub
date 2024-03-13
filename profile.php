@@ -159,10 +159,10 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
                                 <label name="username" class="form-label"><?= $result2[0]["email"] ?></label>
                             </div>
                             <div class="mb-3 d-flex align-items-center">
-    <label for="profile_picture" class="form-label me-3">Profile Picture:</label>
-    <input type="file" class="form-control me-3" id="profile_picture" name="profile_picture">
-    <button type="submit" class="btn btn-primary">Upload Picture</button>
-</div>
+                                <label for="profile_picture" class="form-label me-3">Profile Picture:</label>
+                                <input type="file" class="form-control me-3" id="profile_picture" name="profile_picture">
+                                <button type="submit" class="btn btn-primary">Upload Picture</button>
+                            </div>
                         </form>
                     </div>
                 </div>

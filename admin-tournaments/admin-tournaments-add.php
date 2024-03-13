@@ -7,10 +7,10 @@
             </div>
         </div>
         <div class="col-6">
-            <div class=" mb-3">
+            <div class=" mb-3 ">
                 <input type="hidden" name="MAX_FILE_SIZE" value="9999999999" />
-                <label for="image" class="">Image File</label>
-                <input name="image" type="file" />
+                <label for="image" class="form-label me-3"><b>Image_File</b></label>
+                <input name="image" type="file" class="form-control me-3" />
             </div>
         </div>
         <div class="col-12">
@@ -36,6 +36,6 @@
 
     </div>
     <input type="hidden" name="data_type" value="admin-tournaments-add">
-    <button type="submit" name="submit" value="Send File" class="btn btn-outline-danger">ADD</button>   
+    <button type="submit" name="submit" value="Send File" class="btn btn-info btn-lg">ADD</button>   
 </form>
     

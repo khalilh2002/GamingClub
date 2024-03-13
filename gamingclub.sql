@@ -130,8 +130,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
+ALTER Table users
+ADD COLUMN profile_picture VARCHAR(512) DEFAULT NULL
+
 INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `email`, `pass`, `id_login`, `profile_picture`) VALUES
-(1, 'El Mahdi', 'Id Lahcen', 'mehdiidlehcen123@gmail.com', '', 3, '/profile_pictures/demon slayer.jpg');
+(1, 'El Mahdi', 'Id Lahcen', 'mehdiidlehcen123@gmail.com', '', 2, '/profile_pictures/demon slayer.jpg');
 
 --
 -- Indexes for dumped tables
