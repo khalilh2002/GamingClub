@@ -112,6 +112,10 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
         width: 240px; /* Adjust width according to content */
         height: 40px; /* Increase height */
     }
+    .form-label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 
