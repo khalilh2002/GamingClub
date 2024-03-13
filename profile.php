@@ -116,6 +116,22 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
+        #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./css/LogoFull.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  filter: blur(5px); /* Apply the blur effect to the background */
+  z-index: -1; /* Ensure the background is behind other content */
+}
+<?php 
+            include "./css/style.css";
+        ?>
     </style>
 </head>
 
@@ -125,7 +141,7 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
         include "./navbar.php";
         ?>
     </header>
-
+    <div id="background"></div> <!-- This will serve as the blurred background -->
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -138,31 +154,31 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
                         <?php endif; ?>
                     </div>
                     <div class="card-header">
-                        <h3 class="text-center">My Profile</h3>
+                        <h3 class="text-center" style="color: red";>My Profile</h3>
                     </div>
                     <div class="card-body">
                         <form method="post" enctype="multipart/form-data">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username:</label>
+                                <label for="username" class="form-label" style="color: blue";>Username:</label>
                                 <label name="username" class="form-label"><?= $result[0]["username"] ?></label>
                             </div>
                             <div class="mb-3">
-                                <label for="firstName" class="form-label">First Name:</label>
+                                <label for="firstName" class="form-label" style="color: blue";>First Name:</label>
                                 <label name="username" class="form-label"><?= $result2[0]["first_name"] ?></label>
                             </div>
                             <div class="mb-3">
-                                <label for="lastName" class="form-label">Last Name:</label>
+                                <label for="lastName" class="form-label" style="color: blue";>Last Name:</label>
                                 <label name="username" class="form-label"><?= $result2[0]["last_name"] ?></label>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email:</label>
+                                <label for="email" class="form-label" style="color: blue";>Email:</label>
                                 <label name="username" class="form-label"><?= $result2[0]["email"] ?></label>
                             </div>
                             <div class="mb-3 d-flex align-items-center">
-                                <label for="profile_picture" class="form-label me-3">Profile Picture:</label>
-                                <input type="file" class="form-control me-3" id="profile_picture" name="profile_picture">
-                                <button type="submit" class="btn btn-primary">Upload Picture</button>
-                            </div>
+    <label for="profile_picture" class="form-label me-3" style="color: blue";>Profile Picture:</label>
+    <input type="file" class="form-control me-3" id="profile_picture" name="profile_picture">
+    <button type="submit" class="btn btn-primary">Upload Picture</button>
+</div>
                         </form>
                     </div>
                 </div>
