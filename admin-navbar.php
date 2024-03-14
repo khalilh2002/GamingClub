@@ -43,9 +43,13 @@
       </ul>
       
     </div>
-    <form action="./admin-navbar.php" method="post">
-      <button class="btn btn-primary" name="logout" value = "end">Logout</button>
-    </form>
+    <div class="navbar-brand d-flex gap-3">
+      <a href="./admin-change-password.php" class="btn btn-success" name="logout" value = "end">change password</a>
+      <form action="./admin-navbar.php" method="post">
+        <button class="btn btn-primary" name="logout" value = "end">Logout</button>
+      </form> 
+    </div>
+    
   </div>
 </nav>
 

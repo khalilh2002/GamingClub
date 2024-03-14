@@ -64,6 +64,17 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
         if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $targetFile)) {
             // Update the database with the file path
             $filePath = "/profile_pictures/" . basename($_FILES["profile_picture"]["name"]);
+            
+            //houssine
+            $updateQry = "SELECT profile_picture FROM users  WHERE id_login = ".$_SESSION['id_user'];
+            $updateStmt = $conn->prepare($updateQry);
+            $updateStmt->execute();
+            $result = $updateStmt->fetchAll(PDO::FETCH_ASSOC);
+            print_r($result);
+            unlink(".".$result[0]["profile_picture"]);
+            
+            //fin
+
             // Assuming you have a column named profile_picture in your users table
             $updateQry = "UPDATE users SET profile_picture = :profile_picture WHERE id_login = ".$_SESSION['id_user'];
             $updateStmt = $conn->prepare($updateQry);

@@ -16,6 +16,10 @@
     font-family: Montserrat;
     src: url(./css/Montserrat/Montserrat.ttf);
 }
+@font-face {
+    font-family: 'Honk';
+    src: url(./css/Honk/Honk-Regular-VariableFont_MORF\,SHLN.ttf);
+}
 /*font*/
 .font-dredd{
     font-family: "dredd";
