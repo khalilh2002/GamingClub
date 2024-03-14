@@ -34,6 +34,7 @@ require "./connect.php";
   session_write_close();
   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,22 +55,35 @@ require "./connect.php";
 </header>
 
 <main>
-  <form action="./admin-change-password.php" method="post" class="p-3 md-3">
-    <div>
-      <label for="oldPassword" class="form-control bg-secondary">Old Password</label>
-      <input type="password" class="form-control" name="oldPassword">
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Change Password
+        </div>
+        <div class="card-body">
+          <form action="./admin-change-password.php" method="post" class="p-3 md-3">
+            <div class="form-group">
+              <label for="currentPassword">Current Password</label>
+              <input type="password" class="form-control" name="oldPassword" >
+            </div>
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input type="password" class="form-control" name="newPassword">
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm New Password</label>
+              <input type="password" class="form-control" name="newPassword-confirm">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success" name="changePassword" value="change">Change Password</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="newPassword" class="form-control bg-secondary">New Password</label>
-      <input type="password" class="form-control" name="newPassword">
-    </div>
-    <div>
-      <label for="newPassword-confirm" class="form-control bg-secondary">Confirm Password</label>
-      <input type="password" class="form-control" name="newPassword-confirm">
-    </div>
-    <div>
-      <button type="submit" class="btn btn-success" name="changePassword" value="change" >Submit</button>
-    </div>
-  </form>
+  </div>
+</div>
+
 </main>
 </body>

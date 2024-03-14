@@ -3,7 +3,13 @@ if (!session_status() === PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-require_once "./connect.php"; // Include your database connection file here
+// Include your database connection file here
+
+if (file_exists("./connect.php")) {
+    require_once "./connect.php"; 
+}else{
+    require_once "../connect.php"; 
+}
 
 ?>
 <style>
@@ -21,20 +27,20 @@ require_once "./connect.php"; // Include your database connection file here
 
 <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-        <a href="./index.php" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
             <img src="img/logoclub.png" alt="Gaming Club" width="24" height="24" id="logoimg" onerror="loadimg()">
             Gaming Club
         </a>
         <div class="collapse navbar-collapse navbar-brand" id="navbar001">
             <ul class="navbar-nav mb-2 me-auto mb-lg-0 ">
                 <li class="nav-item">
-                    <a href="index.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>">Home</a>
+                    <a href="./index.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="news.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'news.php') echo 'active'; ?>">News</a>
+                    <a href="./news.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'news.php') echo 'active'; ?>">News</a>
                 </li>
                 <li class="nav-item">
-                    <a href="tournaments.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'tournaments.php') echo 'active'; ?>">Tournaments</a>
+                    <a href="./tournaments.php" aria-current="page" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'tournaments.php') echo 'active'; ?>">Tournaments</a>
                 </li>
             </ul>
         </div>

@@ -95,6 +95,8 @@
                 $card_title = $_POST["card_title"];
                 $card_text = $_POST["card_text"] ;
                 $card_link = $_POST["link"] ;
+
+                $card_link = "./tournament-new-pages/$card_title".time().".php";
                 $card_img = $filepath;
             
                 echo"its okey it move";
@@ -107,6 +109,14 @@
                 if (!$stmt->execute()) {
                     exit; 
                 }
+                $url = "./tournament-new-pages/generator.php?";
+                $url .= "title=".urlencode("$card_title".time().".php");
+                $url .= "&card_title=".urlencode($card_title);
+                $url .= "&card_text=".urlencode($card_text);
+                echo $url;
+                
+                header("location: $url");
+
                 
             
             }else{
@@ -120,7 +130,7 @@
                 please , give all the info
             ";
         }
-        header('location: admin-tournaments.php');
+        //header('location: admin-tournaments.php');
     }
     
     

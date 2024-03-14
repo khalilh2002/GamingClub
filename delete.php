@@ -54,13 +54,14 @@
             $id = $_POST["id_tournament"];
             
             //remove image from folder
-            $qry = 'SELECT img_path FROM tournament_img WHERE id_tournament="'.$id.'"';
+            $qry = 'SELECT * FROM tournament_img WHERE id_tournament="'.$id.'"';
             $stmt = $conn->prepare($qry);
 
             if ($stmt->execute()) {
 
                 $img = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 unlink($img[0]['img_path']);
+                unlink($img[0]["link"]);
 
             }else {
                 echo $stmt->errorInfo();
