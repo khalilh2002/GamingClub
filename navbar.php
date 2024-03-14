@@ -40,8 +40,11 @@ require_once "./connect.php"; // Include your database connection file here
                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
                     if ($result && !empty($result['profile_picture'])) {
                         $profile_picture = $result['profile_picture'];
-                        echo '<img src="' . htmlspecialchars($profile_picture, ENT_QUOTES, 'UTF-8') . '" alt="Profile Picture" width="28" height="30">';
-
+                        // Add ./ prefix to the relative path
+                        if (strpos($profile_picture, './') !== 0) {
+                            $profile_picture = './' . $profile_picture;
+                        }
+                        echo '<img src="' . $profile_picture . '" alt="Profile Picture" width="28" height="30">';
                     } else {
                         echo '<img src="./img/profile.png" alt="Default Profile Picture" width="28" height="30">';
                     }
