@@ -16,7 +16,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <div class="col-md-3">
         <div class="card h-100">
-          <img src="<?= $row["img_path"] ?>" class="card-img-top" alt="...">
+          <img src="<?= $row["img_path"] ?>" class="card-img-top h-50" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?= $row["card_title"] ?> </h5>
             <p class="card-text"><?= $row["card_text"] ?><br>
@@ -25,7 +25,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <a href="<?= $row["link"] ?>" class="btn btn-primary">Visit Link</a>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">&copy; Video Games</small>
           </div>
         </div>
       </div>

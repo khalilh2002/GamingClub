@@ -144,7 +144,7 @@
             <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>        
         <div class="form-group">
-        <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
+        <div class="hint-text">Already have an account? <a href="./login.php">Login here</a></div>
 		</div>
 		<div class="form-group">
             <input type="hidden" name="data_type" value="register">
