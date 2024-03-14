@@ -48,9 +48,9 @@ require_once "./connect.php"; // Include your database connection file here
                 $stmt = $conn->prepare($qry);
                 $stmt->bindParam(':id_login', $_SESSION['id_user']);
                 if ($stmt->execute()) {
-                    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                    if ($result && !empty($result['profile_picture'])) {
-                        $profile_picture = $result['profile_picture'];
+                    $result_nav = $stmt->fetch(PDO::FETCH_ASSOC);
+                    if ($result_nav && !empty($result_nav['profile_picture'])) {
+                        $profile_picture = $result_nav['profile_picture'];
                         // Add ./ prefix to the relative path
                         if (strpos($profile_picture, './') !== 0) {
                             $profile_picture = './' . $profile_picture;

@@ -70,8 +70,8 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
             $updateStmt = $conn->prepare($updateQry);
             $updateStmt->execute();
             $result = $updateStmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r($result);
             unlink(".".$result[0]["profile_picture"]);
+
             
             //fin
 
@@ -93,6 +93,7 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
         }
     }
 }
+
 
 ?>
 
@@ -147,6 +148,7 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
 }
 <?php 
             include "./css/style.css";
+
         ?>
     </style>
 </head>
@@ -154,7 +156,9 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
 <body>
     <header>
         <?php
+
         include "./navbar.php";
+
         ?>
     </header>
     <div id="background"></div> <!-- This will serve as the blurred background -->
@@ -172,6 +176,7 @@ if (isset($_FILES['profile_picture']) && !empty($_FILES['profile_picture']['name
                     <div class="card-header">
                         <h3 class="text-center" style="color: red";>My Profile</h3>
                     </div>
+                    
                     <div class="card-body">
                         <form method="post" enctype="multipart/form-data">
                             <div class="mb-3">

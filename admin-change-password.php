@@ -1,7 +1,6 @@
 <?php
 session_start();
 require "./connect.php";
-print_r($_SESSION);
 
   if (isset($_POST['changePassword'] , $_POST['oldPassword'] ,
   $_POST['newPassword'],$_POST['newPassword-confirm']) && $_POST["changePassword"]==="change") 
@@ -28,8 +27,7 @@ print_r($_SESSION);
     
     $updateStmt = $conn->prepare($updateQry);
     if ($updateStmt->execute()) {
-      echo "ok changed";
-      exit;
+      header("location: admin-change-password.php");
     }
     
   }
