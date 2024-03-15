@@ -124,7 +124,7 @@
 <div class="signup-form" >
 
 
-    <form action="./upload.php" method="post">
+    <form action="./verfier.php" method="post">
 		<h2>Sign Up</h2>
 		<p>Please fill in this form to create an account!</p>
 		<hr>

@@ -1,23 +1,40 @@
 
 <?php
-    include_once "./connect.php";
-
-    switch ($_POST["data_type"]) {
-        case 'admin-tournaments-add':
-            add_tournament($conn);
-            break;
-        case 'admin-news-add':
-            add_news($conn);
-            break;
-        case 'register':
-            add_user($conn);
+    require_once "./connect.php";
+    if (isset($_POST["data_type"])) {
+        # code...
+        switch ($_POST["data_type"]) {
+            case 'admin-tournaments-add':
+                add_tournament($conn);
                 break;
-        default:
-            # code...
-            break;
+            case 'admin-news-add':
+                add_news($conn);
+                break;
+            case 'register':
+                add_user($conn);
+                    break;
+            default:
+                # code...
+                break;
+        }
     }
+    if ($_GET["n"]==200) {
+        session_start();
+        $_POST["first_name"]=$_SESSION["first_name"];
+        $_POST["last_name"]=$_SESSION["last_name"];
+        $_POST["email"]=$_SESSION["email"];
+        $_POST["username"]=$_SESSION["username"];
+        $_POST["password"]=$_SESSION["password"];
+
+        $_POST["submit"]="ok";
+        add_user($conn);
+    }
+    
+    
 
     function add_user($conn){
+        echo "you are user";
+        
         if (isset($_POST["first_name"],$_POST["last_name"],$_POST["email"],$_POST["username"],$_POST["password"] ,$_POST["submit"])){
             
             $first_name=$_POST["first_name"];
