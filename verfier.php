@@ -45,7 +45,7 @@
         }
         header("location:verfier.php");
 
-    }else if(isset($_SESSION["verfier"],$_SESSION["expire_date"] , $_SESSION["code"]) && $_SESSION["verfier"]==true || ($_SESSION["expire_date"] >= time()) ){
+    }else if(isset($_SESSION["verfier"],$_SESSION["expire_date"] , $_SESSION["code"]) && $_SESSION["verfier"]==true && ($_SESSION["expire_date"] >= time()) ){
             if (isset($_POST["verfier_code_input"])) {
                 $input = $_POST["verfier_code_input"];
 
