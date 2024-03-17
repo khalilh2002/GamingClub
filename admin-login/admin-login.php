@@ -1,3 +1,35 @@
+<?php
+    session_start();
+    require_once "../connect.php";  
+?>
+
+<?php
+    if (isset($_POST['data_type'] , $_POST['password'] , $_POST["password_confirm"]) && $_POST['data_type']==="change_password_first_time" ) {
+        if ($_POST['password']  != $_POST["password_confirm"] ) {
+            unset($_POST);
+            ?>
+                <script>
+                    window.alert(" error passwords are different");
+                </script>
+            <?php
+}else{
+            $username = $_SESSION["username"];
+            $password = $_POST["password"];
+            $qry = "INSERT INTO  login_admin(username , pass)
+                VALUES('$username','$password')
+            ";
+            $stmt = $conn->prepare($qry);
+            $stmt->execute();
+
+            $qry = "UPDATE login set first_time=false WHERE username = '$username'";
+            $stmt = $conn->prepare($qry);
+            $stmt->execute();
+            
+            $_SESSION["first_time"]=false;
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +55,9 @@
     </style>
 </head>
 <body >
+<?php 
+    if ($_SESSION["first_time"]==false):
+?>
 <a href="../index.php" id="home-button">
     <i class="fas fa-door-closed"></i>
   </a>
@@ -45,6 +80,38 @@
             </div>
         </div>
     </div>
+
+<?php 
+    elseif ($_SESSION["first_time"]==true):
+?>
+
+<a href="../index.php" id="home-button">
+    <i class="fas fa-door-closed"></i>
+  </a>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Create New Password for Admin</h2>
+                <form action="admin-login.php" method="post" >
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Password_old</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password_New</label>
+                        <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
+                    </div>
+                    <input type="hidden" name="data_type" value="change_password_first_time">
+                    <button type="submit" class="btn btn-primary">change password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<?php 
+    endif;
+?>
+
 
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     
