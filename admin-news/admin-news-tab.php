@@ -75,8 +75,7 @@
         role="tabpanel"
         aria-labelledby="remove-tab"
     >
-        
-          
+         
          <?php
             include "./admin-news/admin-news-remove.php";
         ?>

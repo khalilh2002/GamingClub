@@ -16,7 +16,7 @@
     </header>
     <div id="admin-tournament-tab" >
         <?php
-        // include "./connect.php";
+        //include "./connect.php";
         include "./admin-tournaments/admin-tournaments-tab.php"; 
         ?> 
     </div>

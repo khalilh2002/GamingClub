@@ -4,12 +4,41 @@
     require "phpmailer/src/Exception.php";
     require "phpmailer/src/PHPMailer.php";
     require "phpmailer/src/SMTP.php";
+
+
+    //hadi katsift email
+    function sendMail($mail , $username , $password , $fromEmail , $toEmail , $subject , $message){
+        try {
+            $mail->isSMTP();
+            $mail->Host='smtp.gmail.com';
+            $mail->SMTPAuth=true;
+            $mail->Username = $username;
+            $mail->Password =$password;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port= 465;
+            $mail->setFrom($fromEmail);
+            $mail->addAddress($toEmail);
+            $mail->isHTML(true);
+            $mail->Subject=$subject;
+            $mail->Body=$message;
+
+
+            $mail->send(); 
+            return true;
+
+        } catch (\Throwable $th) {
+            echo"".$th->getMessage()."";
+            return false;
+        }
+    }
     
     
     session_start();
-    $random_code= null;
+    $random_code= null; //had howa l var li raywli random
+
+    //had if ktchof whach les donner 3amrin
     if (isset($_POST["first_name"] , $_POST["email"] , $_POST["username"] , $_POST["password"] , $_POST["last_name"])) {
-        # code...
+        
         $_SESSION["first_name"]=$_POST["first_name"];
         $_SESSION["last_name"]=$_POST["last_name"];
         $_SESSION["email"]=$_POST["email"];
@@ -20,7 +49,7 @@
     }
     
 
-
+    //if lwla katsift email ila m3mro tsift "ou" katsifto ila sal 'expire_date'
     if (!isset($_SESSION["verfier"],$_SESSION["expire_date"]) ||$_SESSION["verfier"]==false || ($_SESSION["expire_date"] < time()) ){
 
 
@@ -45,6 +74,7 @@
         }
         header("location:verfier.php");
 
+    //hadi kat verfier wach l code li ktbo howa nit li sifto lih       
     }else if(isset($_SESSION["verfier"],$_SESSION["expire_date"] , $_SESSION["code"]) && $_SESSION["verfier"]==true && ($_SESSION["expire_date"] >= time()) ){
             if (isset($_POST["verfier_code_input"])) {
                 $input = $_POST["verfier_code_input"];
@@ -59,36 +89,6 @@
                 }
             }
             
-    }
-    
-    
-    
-    
- 
-    
-    function sendMail($mail , $username , $password , $fromEmail , $toEmail , $subject , $message){
-        try {
-            $mail->isSMTP();
-            $mail->Host='smtp.gmail.com';
-            $mail->SMTPAuth=true;
-            $mail->Username = $username;
-            $mail->Password =$password;
-            $mail->SMTPSecure = 'ssl';
-            $mail->Port= 465;
-            $mail->setFrom($fromEmail);
-            $mail->addAddress($toEmail);
-            $mail->isHTML(true);
-            $mail->Subject=$subject;
-            $mail->Body=$message;
-
-
-            $mail->send(); 
-            return true;
-
-        } catch (\Throwable $th) {
-            echo"".$th->getMessage()."";
-            return false;
-        }
     }
     
 ?>

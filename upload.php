@@ -28,6 +28,9 @@
 
         $_POST["submit"]="ok";
         add_user($conn);
+        
+        session_unset();
+        session_destroy();
     }
     
     
