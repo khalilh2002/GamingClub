@@ -59,8 +59,13 @@ function normal_login($conn){
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (count($result) >= 1) {
             //echo " <script> window.alert('you ara in the db'); </script> ";
-            if ($username=="admin") {
+            if ($username=="admin" || $result[0]["super_user"]==true) {
 
+
+                $_SESSION["first_time"]=$result[0]["first_time"];
+                $_SESSION["username"]=$result[0]["username"];
+
+                
                 //admin
                 header('location: ./admin-login/admin-login.php');
             }else{

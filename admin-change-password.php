@@ -27,7 +27,12 @@ require "./connect.php";
     
     $updateStmt = $conn->prepare($updateQry);
     if ($updateStmt->execute()) {
-      header("location: admin-change-password.php");
+      ?>
+      <script>
+        window.alert("password changed susseccfuly");
+      </script>
+      <?php
+      header("location: admin.php");
     }
     
   }
