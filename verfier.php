@@ -98,12 +98,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Email Verification</title>
+    <style>
+        <?php include "./css/verify.css"; ?>
+    </style>
 </head>
 <body>
-    <form action="verfier.php" method="post">
-        <input type="text" name="verfier_code_input">
-        <button type="submit">Submit</button>
-    </form>
+    <div id="background"></div> <!-- This will serve as the blurred background -->
+    <div id="login-form-wrap">
+        <h2>Email Verification</h2>
+        <h5>Please Check your E-mail and Send the code that was sent to your inbox</h5>
+        <form action="verfier.php" method="post" id="login-form">
+            <input type="text" name="verfier_code_input" placeholder="Verification Code">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </div>
 </body>
 </html>
