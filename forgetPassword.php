@@ -2,6 +2,8 @@
     session_start();
     require_once "./connect.php";
 
+    unset($_SESSION["change_password"]);
+
     if (!isset($_SESSION["reset_status"] , $_SESSION["reset_date_expire"] , $_SESSION["send_once"] , $_SESSION["change_password"])) {
         $_SESSION["reset_status"]=false ;
         $_SESSION["reset_date_expire"]=0;

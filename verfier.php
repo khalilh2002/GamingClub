@@ -52,7 +52,6 @@
     //if lwla katsift email ila m3mro tsift "ou" katsifto ila sal 'expire_date'
     if (!isset($_SESSION["verfier"],$_SESSION["expire_date"]) ||$_SESSION["verfier"]==false || ($_SESSION["expire_date"] < time()) ){
 
-
         $n = rand(0,999999);
         $random_code = str_pad($n,6,"0",STR_PAD_LEFT);//send email
 

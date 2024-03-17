@@ -74,8 +74,14 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="">forget password</a>
+                    </div>
+                    <div>
                     <input type="hidden" name="data_type" value="login-admin">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary">Login</button>    
+                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -101,6 +107,7 @@
                         <label for="password" class="form-label">Password_New</label>
                         <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
                     </div>
+                    
                     <input type="hidden" name="data_type" value="change_password_first_time">
                     <button type="submit" class="btn btn-primary">change password</button>
                 </form>
