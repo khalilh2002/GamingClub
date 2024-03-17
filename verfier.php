@@ -45,7 +45,7 @@
         $_SESSION["username"]=$_POST["username"];
         $_SESSION["password"]=$_POST["password"];
 
-        print_r($_SESSION);
+
     }
     
 

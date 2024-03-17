@@ -49,7 +49,7 @@
     </form>
   <div id="create-account-wrap">
     <p>Not a member? <a href="register.php">Create Account</a><p>
-    <p>Forget password? <a href="">reset</a><p>
+    <p>Forget password? <a href="forgetPassword.php">reset</a><p>
   </div><!--create-account-wrap-->
 </div><!--login-form-wrap-->
 <!-- partial -->
