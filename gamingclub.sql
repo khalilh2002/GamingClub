@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 18, 2024 at 12:55 AM
+-- Generation Time: Mar 19, 2024 at 02:00 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `first_time` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id_login`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
@@ -45,18 +45,15 @@ CREATE TABLE IF NOT EXISTS `login` (
 INSERT INTO `login` (`id_login`, `username`, `pass`, `super_user`, `first_time`) VALUES
 (1, 'test', '0', 1, 0),
 (2, 'admin', 'admin', 1, 0),
-(3, 'user3', '00', 0, 1),
-(4, 'user4', 'password4', 0, 1),
-(5, 'user5', 'password5', 0, 1),
-(6, 'user6', 'password6', 0, 1),
+(3, 'user3', '00', 1, 0),
+(6, 'user6', 'password6', 1, 1),
 (7, 'user7', 'password7', 0, 1),
 (8, 'user8', 'password8', 0, 1),
 (9, 'user9', 'password9', 0, 1),
 (10, 'user10', 'password10', 0, 1),
 (11, 'user11', 'password11', 0, 1),
 (12, 'user12', 'password12', 0, 1),
-(13, 'user13', 'password13', 0, 1),
-(14, 'user14', 'password14', 0, 1),
+(13, 'user13', 'password13', 1, 1),
 (15, 'user15', 'password15', 0, 1),
 (16, 'user16', 'password16', 0, 1),
 (17, 'user17', 'password17', 0, 1),
@@ -73,8 +70,9 @@ INSERT INTO `login` (`id_login`, `username`, `pass`, `super_user`, `first_time`)
 (28, 'user28', 'password28', 0, 1),
 (29, 'user29', 'password29', 0, 1),
 (30, 'user30', 'password30', 0, 1),
-(32, 'khalil', 'l789', 0, 1),
-(33, 'khalil2002', 'pass', 0, 1);
+(32, 'khalil', '456', 1, 1),
+(33, 'khalil2002', 'pass', 0, 1),
+(34, 'testmoh', '123', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -90,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `login_admin` (
   PRIMARY KEY (`id_login_admin`),
   UNIQUE KEY `id_login_admin` (`id_login_admin`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login_admin`
@@ -98,7 +96,9 @@ CREATE TABLE IF NOT EXISTS `login_admin` (
 
 INSERT INTO `login_admin` (`id_login_admin`, `username`, `pass`) VALUES
 (3, 'test', '123'),
-(2, 'admin', 'password');
+(2, 'admin', 'bimo'),
+(4, 'user3', '123'),
+(5, 'user4', '456');
 
 -- --------------------------------------------------------
 
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `id_login` (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -184,8 +184,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `email`, `id_login`, `profile_picture`) VALUES
 (1, 'El Mahdi', 'Id Lahcen', 'mehdiidlehcen123@gmail.com', 1, '/profile_pictures/YmxSwavX_200x200.png'),
-(4, 'Emily', 'Brown', 'emily.brown@example.com', 4, 'profile_pics/emilybrown.jpg'),
-(5, 'Michael', 'Johnson', 'michael.johnson@example.com', 5, 'profile_pics/michaeljohnson.jpg'),
 (6, 'Jessica', 'Martinez', 'jessica.martinez@example.com', 6, 'profile_pics/jessicamartinez.jpg'),
 (7, 'Christopher', 'Lee', 'christopher.lee@example.com', 7, 'profile_pics/christopherlee.jpg'),
 (8, 'Ava', 'Garcia', 'ava.garcia@example.com', 8, 'profile_pics/avagarcia.jpg'),
@@ -194,7 +192,6 @@ INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `email`, `id_login`, 
 (11, 'Daniel', 'Rodriguez', 'daniel.rodriguez@example.com', 11, 'profile_pics/danielrodriguez.jpg'),
 (12, 'Sophia', 'Wilson', 'sophia.wilson@example.com', 12, 'profile_pics/sophiawilson.jpg'),
 (13, 'David', 'Anderson', 'david.anderson@example.com', 13, 'profile_pics/davidanderson.jpg'),
-(14, 'Isabella', 'Taylor', 'isabella.taylor@example.com', 14, 'profile_pics/isabellataylor.jpg'),
 (15, 'James', 'Thomas', 'james.thomas@example.com', 15, 'profile_pics/jamesthomas.jpg'),
 (16, 'Charlotte', 'Hernandez', 'charlotte.hernandez@example.com', 16, 'profile_pics/charlottehernandez.jpg'),
 (17, 'Logan', 'Moore', 'logan.moore@example.com', 17, 'profile_pics/loganmoore.jpg'),
@@ -203,7 +200,8 @@ INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `email`, `id_login`, 
 (20, 'Mia', 'Thompson', 'mia.thompson@example.com', 20, 'profile_pics/miathompson.jpg'),
 (22, 'El Houssine', 'KHALIL', 'khalil.hessein@gmail.com', 32, '/profile_pictures/images.jpeg'),
 (23, 'khalil ', 'el houssine', 'khalil.houssein2002@gmail.com', 33, NULL),
-(2, 'admin', 'houssine', 'spamfake2022@gmail.com', 2, NULL);
+(2, 'admin', 'houssine', 'spamfake2022@gmail.com', 2, NULL),
+(24, 'mohamed', 'moad', 'mouadrguibi900@gmail.com', 34, '/profile_pictures/download.jpeg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

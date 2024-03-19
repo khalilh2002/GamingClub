@@ -12,7 +12,7 @@
                     window.alert(" error passwords are different");
                 </script>
             <?php
-}else{
+        }else{
             $username = $_SESSION["username"];
             $password = $_POST["password"];
             $qry = "INSERT INTO  login_admin(username , pass)
@@ -68,21 +68,25 @@
                 <form action="../authentication.php" method="post" >
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" >
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" >
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <a href="">forget password</a>
-                    </div>
+                    
                     <div>
                     <input type="hidden" name="data_type" value="login-admin">
                     <button type="submit" class="btn btn-primary">Login</button>    
                     </div>
                     
                 </form>
+                <form action="../verfier-admin-code.php" method="post">
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-unstyled text-primary text-decoration-underline" value="reset" name="reset">forget password</button>
+                    </div>
+                </form>
+                
             </div>
         </div>
     </div>
@@ -100,7 +104,7 @@
                 <h2 class="mb-4">Create New Password for Admin</h2>
                 <form action="admin-login.php" method="post" >
                     <div class="mb-3">
-                        <label for="username" class="form-label">Password_old</label>
+                        <label for="username" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <div class="mb-3">

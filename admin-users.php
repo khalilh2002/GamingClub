@@ -45,12 +45,14 @@
             ?>
                 
                 <table class="table table-bordered  table-centered ">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center mt-5">
                         <td>user ID</td>
                         <td>First Name</td>
                         <td>Last Name</td>
                         <td>Email</td>
                         <td>Username</td>
+                        <td>super</td>
+                        <td>#</td>
                         <td>#</td>
                     </thead>
                 
@@ -60,13 +62,15 @@
                     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($result as $row) :
                     ?>
-                        <tbody>
+                        <tbody class="text-center mt-5">
                             <td><?= $row["id_user"] ?></td>
                             <td><?= $row["first_name"] ?></td>
                             <td><?= $row["last_name"] ?></td>
                             <td><?= $row["email"] ?></td>
                             <td><?= $row["username"] ?></td>
-                            <td><button type="submit" class="btn btn-danger" name="user_remove" value="<?= $row["id_login"] ?>" >Delete</button></td>
+                            <td><?php echo ($row["super_user"] == 1) ? "admin" : "user"; ?></td>
+                            <td><button type="submit" class="btn btn-success  <?php if($row["super_user"]==1): echo "disabled" ; endif ?>" name="user_super" value="<?= $row["id_login"] ?>" >Admin</button></td>
+                            <td><button type="submit" class="btn btn-danger <?php if($row["super_user"]==1): echo "disabled" ; endif ?>" name="user_remove" value="<?= $row["id_login"] ?>" >Delete</button></td>
                         </tbody>
 
                     <?php endforeach;?>

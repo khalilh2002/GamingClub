@@ -18,8 +18,10 @@
             break;
     }
     function delete_user($cdd){
+        include "./connect.php";
+
         if (isset($_POST['data_type'] , $_POST["user_remove"]) && $_POST['data_type']=='admin-users-remove') {
-            include "./connect.php";
+            
             $id_login = $_POST["user_remove"];
             $qry = "DELETE FROM users WHERE id_login =".$id_login;
             $stmt = $conn->prepare($qry);
@@ -27,11 +29,21 @@
 
             $qry = "DELETE FROM login WHERE id_login =".$id_login;
             $stmt = $conn->prepare($qry);
+            
+            if($stmt->execute()){
+                header('location: ./admin-users.php');
+            }
+            
+        }elseif(isset($_POST['data_type'] , $_POST["user_super"]) && $_POST['data_type']=='admin-users-remove'){
+            $id = $_POST["user_super"];
+            $qry = "UPDATE login set super_user=true where id_login=$id";
+            $stmt = $conn->prepare($qry);
             if($stmt->execute()){
                 header('location: ./admin-users.php');
             }
         }
     }
+
 
     function delete_news($conn){
         if (isset($_POST["id_news"])) {
