@@ -52,8 +52,8 @@
     
     if (isset($email , $firstName ,$lastName,$sujet,$message) ) {
         $mail = new PHPMailer(true);
-        $user = "spamfake2022@gmail.com";
-        $pass = 'gqjxgwtadigppdln';
+        $user = "email@gmail.com";
+        $pass = 'azertyuiokjhgfds';
 
         $content = "From : $firstName $lastName \r\n objet : $sujet \r\n".$message."\n";
         
