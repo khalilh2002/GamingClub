@@ -72,8 +72,8 @@
         $_SESSION["reset_date_expire"]=time()+(60*15);
         
         $mail = new PHPMailer(true);
-        $user = "spamfake2022@gmail.com";
-        $pass = 'gqjxgwtadigppdln';
+        $user = "email@gmai.com";
+        $pass = 'sdxfcghjk';
         $content = $random_code;
 
         if(sendMail($mail,$user,$pass,$user,$email_reset,"Rest Password",$random_code)){
