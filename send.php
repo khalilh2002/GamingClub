@@ -81,53 +81,5 @@
     }
 
 
-
-
-
-
-/*
-    function captchaVerfie(){
-        
-        $secret_key = "6Ld7k4kpAAAAADrtgyeU39WbZ2XLCb6oYt6m7fgn";
-        
-        // Your secret key provided by Google
-        $secret = "6LdvtYkpAAAAAOL_FjtgvIeXyO1KNADuhviy2N0U";
-
-        // User's response from the reCAPTCHA widget
-        $response = $_POST['g-recaptcha-response'];
-
-        // Verify the reCAPTCHA response
-        $verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
-        $data = array(
-            'secret' => $secret,
-            'response' => $response
-        );
-
-        $options = array(
-            'http' => array(
-                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method'  => 'POST',
-                'content' => http_build_query($data)
-            )
-        );
-
-        $context  = stream_context_create($options);
-        $response = file_get_contents($verifyUrl, false, $context);
-        $result = json_decode($response, true);
-
-        // Check if the verification was successful
-        if ($result['success']) {
-            // Captcha verification successful, proceed with your code
-            echo "Captcha verification successful!";
-            return true;
-        } else {
-            // Captcha verification failed
-            echo "Captcha verification failed. Please try again.";
-            return false;
-        }
-
-    }
-*/
-
 ?>
     
