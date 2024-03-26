@@ -69,13 +69,7 @@
             <textarea name="message" id="message" rows="5" class="form-control" placeholder="write your mesage here"></textarea>
         </div>
         
-        <div class="col-6">
-            <!-- get captcha responde--->
-            <div class="g-recaptcha hide" data-sitekey="6LdvtYkpAAAAANPRBGzc6LZV5ch4nUFW-SfljoPA" data-action="LOGIN"></div>
-            <br/>
-            <button class=" btn btn-outline-primary btn-lg"  type="submit">Submit</button>
-            
-        </div>
+        
     </form>
 </main>
     
